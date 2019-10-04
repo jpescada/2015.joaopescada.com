@@ -1,0 +1,43 @@
+{
+  "name": "joaopescada-www-2015",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jpescada@bitbucket.org/jpescada/joaopescada-www-2015.git"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "responsive",
+    "web",
+    "personal",
+    "blog"
+  ],
+  "author": "Joao Pescada",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/jpescada/joaopescada-www-2015#readme",
+  "devDependencies": {
+    "browser-sync": "^2.9.7",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-file-include": "^0.13.7",
+    "gulp-gzip": "^1.2.0",
+    "gulp-htmlmin": "^1.1.4",
+    "gulp-jshint": "^1.11.2",
+    "gulp-jsonminify": "^1.0.0",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.4.1",
+    "hashids": "^1.0.2",
+    "run-sequence": "^1.1.4",
+    "yargs": "^3.29.0"
+  }
+}

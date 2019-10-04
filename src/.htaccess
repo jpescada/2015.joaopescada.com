@@ -1,0 +1,174 @@
+Options +FollowSymLinks -MultiViews
+
+RewriteEngine on
+RewriteBase /
+
+ErrorDocument 404 /errors/404.html
+ErrorDocument 500 /errors/500.html
+
+
+# Rewrite any calls to www to non-www
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+
+# URL Rewrites (to .HTML) and redirects
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^agencies($|\/$) /agencies.html [NC,L]
+RewriteRule ^startups($|\/$) /startups.html [NC,L]
+
+RewriteRule ^product-discovery/start($|\/$) /product-discovery-start.html [NC,L]
+RewriteRule ^product-discovery($|\/$) /product-discovery.html [NC,L]
+RewriteRule ^website-review/start($|\/$) /website-review-start.html [NC,L]
+RewriteRule ^website-review($|\/$) /website-review.html [NC,L]
+RewriteRule ^mvp-in-a-month($|\/$) /mvp-in-a-month.html [NC,L]
+RewriteRule ^mvp-in-1-month($|\/$) /mvp-in-a-month/$1 [R=301,NC,L]
+RewriteRule ^products($|\/$) /products.html [NC,L]
+
+RewriteRule ^works/ilustrique($|\/$) /works/ilustrique.html [NC,L]
+RewriteRule ^works/managemoney($|\/$) /works/managemoney.html [NC,L]
+RewriteRule ^works/car-finance($|\/$) /works/car-finance.html [NC,L]
+RewriteRule ^works/childspla($|\/$) /works/childspla.html [NC,L]
+RewriteRule ^works/pridejoy($|\/$) /works/pridejoy.html [NC,L]
+RewriteRule ^works/xtandi($|\/$) /works/xtandi.html [NC,L]
+RewriteRule ^works/temppo($|\/$) /works/temppo.html [NC,L]
+RewriteRule ^works/tac($|\/$) /works/tac.html [NC,L]
+RewriteRule ^works/milliaoz($|\/$) /works/milliaoz.html [NC,L]
+RewriteRule ^works/hiscox($|\/$) /works/hiscox.html [NC,L]
+RewriteRule ^works/xwife($|\/$) /works/xwife.html [NC,L]
+RewriteRule ^works($|\/$) /works.html [NC,L]
+
+RewriteRule ^articles/feed($|\/$) /feeds/articles.rss [NC,L]
+RewriteRule ^articles/([A-Za-z0-9\-]+)($|\/$) /articles/$1.html [NC,L]
+RewriteRule ^articles($|\/$) /articles.html [NC,L]
+RewriteRule ^article/(.*) /articles/$1 [R=301,NC,L]
+
+RewriteRule ^travelling/([A-Za-z0-9\-]+)($|\/$) /travelling/$1.html [NC,L]
+RewriteRule ^travelling($|\/$) /travelling.html [NC,L]
+
+RewriteRule ^about($|\/$) /about.html [NC,L]
+RewriteRule ^contact($|\/$) /contact.html [NC,L]
+RewriteRule ^signup/(confirm|welcome)($|/$) /signup\-$1.html [NC,L]
+RewriteRule ^signup($|\/$) /signup.html [NC,L]
+RewriteRule ^availability($|\/$) /index.html [NC,L]
+RewriteRule ^referrals($|\/$) /referrals.html [NC,L]
+
+RewriteRule ^errors/404($|\/$) /errors/404.html [NC,L]
+RewriteRule ^errors/500($|\/$) /errors/500.html [NC,L]
+
+# RewriteRule ^api/proxy($|\/)(.*) /api/proxy.php?$2
+RewriteRule ^api/location($|\/) /api/location.php [NC,L]
+RewriteRule ^api/currency($|\/) /api/currency.json [NC,L]
+RewriteRule ^api/calendar($|\/) /api/calendar.json [NC,L]
+RewriteRule ^api/meetings($|\/) /api/meetings.json [NC,L]
+
+# Make inflow feedback available on root
+RewriteRule ^feedback($|\/$)  / [R=302,NC,L]
+RewriteRule ^feedback/post($|\/$)  ./inflow/clients/feedback_post.php [NC,L]
+RewriteRule ^feedback/thanks($|\/$)  ./inflow/clients/feedback_thanks.html [NC,L]
+RewriteRule ^feedback/([A-Za-z0-9]{4,6})($|\/$)  ./inflow/clients/feedback.php?id=$1 [NC,L]
+RewriteRule ^feedback/([A-Za-z0-9]{4,6})/(negative|neutral|positive){1}($|\/$)    ./inflow/clients/feedback_vote.php?id=$1&v=$2 [NC,L]
+RewriteRule ^feedback/([A-Za-z0-9]{4,6})/([A-Za-z0-9]{4,6})($|\/$)    ./inflow/clients/feedback.php?id=$1&rid=$2 [NC,L]
+RewriteRule ^feedback/([A-Za-z0-9]{4,6})/([A-Za-z0-9]{4,6})/([0-9]+)/(negative|neutral|positive){1}($|\/$)    ./inflow/clients/feedback_vote.php?id=$1&rid=$2&q=$3&v=$4 [NC,L]
+
+# Rewrites for Payment Gateway
+RewriteRule ^payment/([A-Za-z0-9]{4,6})/(success|loading|error){1}($|\/$)    ./payment/index.php?inflow=$1&result=$2 [NC,L]
+RewriteRule ^payment/([A-Za-z0-9]{4,6})($|\/$)    ./payment/index.php?inflow=$1 [NC,L]
+RewriteRule ^payment/api/pay-with-stripe($|\/$)    ./payment/api/pay-with-stripe.php [NC,L]
+RewriteRule ^payment/api/webhook($|\/$)    ./payment/api/webhook.php [NC,L]
+
+# URL Redirects
+RewriteRule ^index($|\/$) / [R=301,NC,L]
+RewriteRule ^home($|\/$) / [R=301,NC,L]
+RewriteRule ^bio($|\/$) /about/ [R=301,NC,L]
+
+RewriteRule ^bma($|\/$) /products/ [R=301,NC,L]
+RewriteRule ^book($|/$) /products/ [R=301,NC,L]
+RewriteRule ^building-mobile-apps($|\/$) /products/ [R=301,NC,L]
+
+RewriteRule ^blog($|\/$) /articles/ [R=301,NC,L]
+RewriteRule ^projects/augmented-reality-demos/ http://2010.joaopescada.com/projects/augmented-reality-demos/ [R=301,NC,L]
+RewriteRule ^project/(.*) /works/ [R=301,NC,L]
+RewriteRule ^projects/(.*) /works/ [R=301,NC,L]
+RewriteRule ^contacts($|\/$) /contact/ [R=301,NC,L]
+
+RewriteRule ^cv($|\/$) /joao-pescada-technologist.pdf [R=301,NC,L]
+
+
+# Social networks redirects
+RewriteRule ^linkedin($|\/$) https://www.linkedin.com/in/jpescada [R=301,NC,L]
+RewriteRule ^twitter($|\/$) https://twitter.com/jpscd [R=301,NC,L]
+RewriteRule ^twitter($|\/$) https://twitter.com/jpscd [R=301,NC,L]
+RewriteRule ^instagram($|\/$) https://instagram.com/jpescada [R=301,NC,L]
+RewriteRule ^flickr($|\/$) https://www.flickr.com/photos/jpscd [R=301,NC,L]
+RewriteRule ^vimeo($|\/$) https://vimeo.com/jpescada [R=301,NC,L]
+
+
+# Add a trailing slash to directories
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_URI} !(\.)
+#RewriteCond %{REQUEST_URI} !(.*)/$
+#RewriteRule ([^/]+)$ $1/ [L]
+
+# Rewrite any calls to /* or /app to the index.php file
+#RewriteCond %{REQUEST_URI} /app/$
+#RewriteRule ^app/ index.php [L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)/$ index.php?$1 [L]
+
+# Rewrite any file calls to the public directory
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_URI} !public/
+#RewriteRule ^(.+)$ public/$1 [L]
+
+#AddHandler php5-script .php
+
+
+# Enable cache
+ExpiresActive On
+
+# Cache favicon
+AddType image/x-icon .ico
+# ExpiresByType image/x-icon "access plus 1 month"
+<FilesMatch "\.ico$">
+	Header set Cache-Control "max-age=604800, must-revalidate"
+</FilesMatch>
+
+# Cache html
+# ExpiresByType text/html "access plus 1 day"
+<FilesMatch ".(html|htm)$">
+	Header set Cache-Control "max-age=86400, must-revalidate"
+</FilesMatch>
+
+
+# GZIP output
+SetOutputFilter DEFLATE
+
+AddOutputFilterByType DEFLATE text/html text/plain text/xml text/x-js text/javascript text/css
+AddOutputFilterByType DEFLATE application/xml application/xhtml+xml application/x-javascript application/javascript
+AddOutputFilterByType DEFLATE application/json
+
+SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+SetEnvIfNoCase Request_URI \.(?:exe|t?gz|zip|bz2|sit|rar)$ no-gzip dont-vary
+SetEnvIfNoCase Request_URI \.pdf$ no-gzip dont-vary
+
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+
+# DeflateFilterNote Input input_info
+# DeflateFilterNote Output output_info
+# DeflateFilterNote Ratio ratio_info
+
+#LogFormat '"%r" %{output_info}n/%{input_info}n (%{ratio_info}n%%)' deflate
+# CustomLog logs/deflate_log deflate

@@ -1,0 +1,83 @@
+
+$screen-tablet: 650px;
+$screen-desktop: 1000px;
+$screen-desktop-xl: 1440px;
+
+@mixin mobile {
+	@media (max-width: #{$screen-tablet - 1px}) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: #{$screen-tablet}) and (max-width: #{$screen-desktop - 1px}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$screen-desktop}) {
+		@content;
+	}
+}
+
+@mixin desktop-xl {
+	@media (min-width: #{$screen-desktop-xl}) {
+		@content;
+	}
+}
+
+@mixin retina {
+	@media
+		only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (min--moz-device-pixel-ratio: 2),
+		only screen and (-o-min-device-pixel-ratio: 2/1),
+		only screen and (min-device-pixel-ratio: 2),
+		only screen and (min-resolution: 192dpi),
+		only screen and (min-resolution: 2dppx) {
+		@content;
+	}
+}
+
+@mixin tablet-retina {
+	@media
+		only screen and (min-width: #{$screen-tablet}) and (max-width: #{$screen-desktop - 1px}) and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (min-width: #{$screen-tablet}) and (max-width: #{$screen-desktop - 1px}) and (min--moz-device-pixel-ratio: 2),
+		only screen and (min-width: #{$screen-tablet}) and (max-width: #{$screen-desktop - 1px}) and (-o-min-device-pixel-ratio: 2/1),
+		only screen and (min-width: #{$screen-tablet}) and (max-width: #{$screen-desktop - 1px}) and (min-device-pixel-ratio: 2),
+		only screen and (min-width: #{$screen-tablet}) and (max-width: #{$screen-desktop - 1px}) and (min-resolution: 192dpi),
+		only screen and (min-width: #{$screen-tablet}) and (max-width: #{$screen-desktop - 1px}) and (min-resolution: 2dppx) {
+		@content;
+	}
+}
+
+@mixin desktop-retina {
+	@media
+		only screen and (min-width: #{$screen-desktop}) and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (min-width: #{$screen-desktop}) and (min--moz-device-pixel-ratio: 2),
+		only screen and (min-width: #{$screen-desktop}) and (-o-min-device-pixel-ratio: 2/1),
+		only screen and (min-width: #{$screen-desktop}) and (min-device-pixel-ratio: 2),
+		only screen and (min-width: #{$screen-desktop}) and (min-resolution: 192dpi),
+		only screen and (min-width: #{$screen-desktop}) and (min-resolution: 2dppx) {
+		@content;
+	}
+}
+
+@mixin desktop-xl-retina {
+	@media
+		only screen and (min-width: #{$screen-desktop-xl}) and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (min-width: #{$screen-desktop-xl}) and (min--moz-device-pixel-ratio: 2),
+		only screen and (min-width: #{$screen-desktop-xl}) and (-o-min-device-pixel-ratio: 2/1),
+		only screen and (min-width: #{$screen-desktop-xl}) and (min-device-pixel-ratio: 2),
+		only screen and (min-width: #{$screen-desktop-xl}) and (min-resolution: 192dpi),
+		only screen and (min-width: #{$screen-desktop-xl}) and (min-resolution: 2dppx) {
+		@content;
+	}
+}
+
+
+@mixin print {
+	@media print {
+		@content;
+	}
+}

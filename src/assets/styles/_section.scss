@@ -1,0 +1,170 @@
+section,
+.section {
+	display: block;
+	position: relative;
+	// margin-top: 42px;
+
+	.section-dark-background {
+		display: block;
+		width: 6000px;
+		height: 100%;
+		position: absolute;
+		left: 50%;
+		top: -210px;
+		transform: rotate(-4deg) translateX(-50%);
+		transform-origin: center top;
+		z-index: 0;
+		background-color: $section-dark-bg;
+		// background-color: lightYellow;
+	}
+
+	article,
+	.section-article {
+		max-width: 700px;
+		min-height: 180px;
+		font-family: $font-stack-body;
+		font-size: 18px;
+		line-height: 30px;
+		font-weight: 400;
+		padding: 60px 20px 108px 20px;
+		transform: translateZ(0);
+		z-index: 3;
+		margin: 0 auto;
+		text-align: left;
+
+		&,
+		> * {
+			&::selection {
+				background-color: lighten($colour-blue, 40%);
+				color: $colour-dark-grey;
+				text-shadow: none;
+			}
+			&::-moz-selection {
+				background-color: lighten($colour-blue, 40%);
+				color: $colour-dark-grey;
+				text-shadow: none;
+			}
+		}
+
+		h3 {
+			text-align: center;
+			font-size: 36px;
+			line-height: 42px;
+			// transform: translateZ(0);
+			// z-index: 3;
+			margin: 42px 0 54px 0;
+			padding: 0;
+			
+			&:after {
+				content: '';
+				display: block;
+				width: 100px;
+				height: 0;
+				margin: 54px auto 0 auto;
+				border-bottom: 2px solid $colour-dark-grey;
+			}
+		}
+
+		dl {
+			margin: 0;
+			padding: 0;
+
+			dt {
+				font-family: $font-stack-title;
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 36px;
+				margin-bottom: 12px;
+				// @include enable-ligatures();
+
+				.icon {
+					position: relative;
+					float: left;
+					margin: 2px 0 0 -50px;
+					font-size: 32px;
+					line-height: 32px;
+					display: none;
+				}
+
+				a {
+					@include smart-link($colour-dark-grey, $colour-pink, true);
+				}
+			}
+
+			dd {
+				margin: 0 0 36px 0;
+				padding: 0;
+			}
+		}
+
+		b,
+		strong {
+			font-weight: 700;
+			font-style: normal;
+		}
+
+		i,
+		em {
+			font-weight: 400;
+			font-style: italic;
+		}
+
+		a {
+			@include smart-link($colour-pink);
+		}
+
+		small {
+			display: inline-block;
+			font-size: 12px;
+			line-height: 24px;
+		}
+
+		.icon-link-arrow {
+			vertical-align: -3px;
+			padding-right: 0;
+			margin-right: -4px;
+			margin-left: -3px;
+		}
+
+		.secondary-link {
+			@include smart-link($colour-blue);
+		}
+
+
+		@include tablet {
+			padding: 60px 20px 108px 20px;
+
+			h3 {
+				font-size: 48px;
+				line-height: 48px;
+			}
+
+			dl {
+				dt {
+					.icon {
+						margin-left: -40px;
+						display: block;
+					}
+				}
+			}
+		}
+
+		@include desktop {
+			padding: 60px 0 108px 0;
+
+			h3 {
+				font-size: 48px;
+				line-height: 48px;
+			}
+
+			dl {
+				dt {
+					.icon {
+						margin-left: -50px;
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}

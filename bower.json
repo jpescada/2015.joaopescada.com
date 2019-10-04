@@ -1,0 +1,22 @@
+{
+  "name": "joaopescada-www-2015",
+  "version": "0.0.0",
+  "authors": [
+    "Joao Pescada <joao@pescada.pt>"
+  ],
+  "description": "Personal website",
+  "main": "src/index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "modernizr": "~2.8.3",
+    "jquery": "~2.1.4"
+  }
+}

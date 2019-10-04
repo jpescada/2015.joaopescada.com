@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	>
+
+<channel>
+	<title>Letters from Joao</title>
+	<atom:link href="https://joaopescada.com/feeds/articles.rss" rel="self" type="application/rss+xml" />
+	<link>https://joaopescada.com/articles</link>
+	<description>Thoughts &amp; Workarounds</description>
+	<lastBuildDate>Mon, 21 Dec 2015 02:20:00 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>weekly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	
+	<item>
+		<title>Happiness, pride and side projects</title>
+		<link>https://joaopescada.com/articles/happiness-pride-and-side-projects/?utm_source=rss&#038;utm_medium=rss</link>
+		<pubDate>Sun, 20 Dec 2015 23:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[jpescada]]></dc:creator>
+		<category><![CDATA[entrepreneurship]]></category>
+		<category><![CDATA[startup]]></category>
+		<category><![CDATA[open source]]></category>
+		<guid isPermaLink="true">https://joaopescada.com/articles/happiness-pride-and-side-projects/</guid>
+		<description><![CDATA[I don’t think there’s a real formula to get things done, but there are some guidelines that can, at least, improve your chances of success.]]></description>
+	</item>
+
+	<item>
+		<title>Get your own audience</title>
+		<link>https://joaopescada.com/articles/get-your-own-audience/?utm_source=rss&#038;utm_medium=rss</link>
+		<pubDate>Tue, 3 Nov 2015 11:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[jpescada]]></dc:creator>
+		<category><![CDATA[digital marketing]]></category>
+		<category><![CDATA[social media]]></category>
+		<guid isPermaLink="true">https://joaopescada.com/articles/get-your-own-audience/</guid>
+		<description><![CDATA[Your website is under your terms, but the satellites are only under your influence. You can direct them, but never fully control them.]]></description>
+	</item>
+
+	<item>
+		<title>How to read books</title>
+		<link>https://joaopescada.com/articles/how-to-read-books/?utm_source=rss&#038;utm_medium=rss</link>
+		<pubDate>Mon, 19 Oct 2015 11:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[jpescada]]></dc:creator>
+		<category><![CDATA[advice]]></category>
+		<category><![CDATA[guide]]></category>
+		<category><![CDATA[reading]]></category>
+		<category><![CDATA[learning]]></category>
+		<category><![CDATA[personal-development]]></category>
+		<guid isPermaLink="true">https://joaopescada.com/articles/how-to-read-books/</guid>
+		<description><![CDATA[I know enough people that haven&#8217;t read a book in a while, just because they &#8220;have&#8221; to finish this other book first.]]></description>
+	</item>
+
+	<item>
+		<title>Why you shouldn&#8217;t be a Javascript Developer</title>
+		<link>https://joaopescada.com/articles/why-you-shouldnt-be-a-javascript-developer/?utm_source=rss&#038;utm_medium=rss</link>
+		<pubDate>Sun, 24 Nov 2013 21:05:51 +0000</pubDate>
+		<dc:creator><![CDATA[jpescada]]></dc:creator>
+		<category><![CDATA[Thoughts]]></category>
+		<category><![CDATA[advice]]></category>
+		<category><![CDATA[guide]]></category>
+		<category><![CDATA[idea]]></category>
+		<category><![CDATA[ideology]]></category>
+		<category><![CDATA[thoughts]]></category>
+		<guid isPermaLink="true">https://joaopescada.com/articles/why-you-shouldnt-be-a-javascript-developer/</guid>
+		<description><![CDATA[It&#8217;s the knowledge gathered from past experiences that will put you at ease, even when you venture into foreign territory.]]></description>
+	</item>
+
+	<item>
+		<title>How to create an iPad app with HTML</title>
+		<link>https://joaopescada.com/articles/how-to-create-an-ipad-app-with-html/?utm_source=rss&#038;utm_medium=rss</link>
+		<pubDate>Fri, 26 Jul 2013 18:49:36 +0000</pubDate>
+		<dc:creator><![CDATA[jpescada]]></dc:creator>
+		<category><![CDATA[Codes]]></category>
+		<category><![CDATA[apple]]></category>
+		<category><![CDATA[css]]></category>
+		<category><![CDATA[css3]]></category>
+		<category><![CDATA[html]]></category>
+		<category><![CDATA[html5]]></category>
+		<category><![CDATA[ios]]></category>
+		<category><![CDATA[ipad]]></category>
+		<category><![CDATA[iphone]]></category>
+		<category><![CDATA[javascript]]></category>
+		<category><![CDATA[jquery]]></category>
+		<category><![CDATA[mobile]]></category>
+		<category><![CDATA[mobile apps]]></category>
+		<category><![CDATA[native]]></category>
+		<category><![CDATA[objective-c]]></category>
+		<category><![CDATA[phonegap]]></category>
+		<category><![CDATA[tablet]]></category>
+		<category><![CDATA[xcode]]></category>
+		<guid isPermaLink="true">https://joaopescada.com/articles/how-to-create-an-ipad-app-with-html/</guid>
+		<description><![CDATA[The main idea you should follow when developing your app is to use HTML5 and CSS3 for visuals and Javascript for logic and interaction with the device hardware.]]></description>
+	</item>
+
+	<item>
+		<title>Breaking the Android UX, one device at a time</title>
+		<link>https://joaopescada.com/articles/breaking-android-ux-one-device-at-a-time/?utm_source=rss&#038;utm_medium=rss</link>
+		<pubDate>Mon, 05 Nov 2012 01:05:50 +0000</pubDate>
+		<dc:creator><![CDATA[jpescada]]></dc:creator>
+		<category><![CDATA[Thoughts]]></category>
+		<category><![CDATA[android]]></category>
+		<category><![CDATA[design]]></category>
+		<category><![CDATA[future]]></category>
+		<category><![CDATA[galaxy s3]]></category>
+		<category><![CDATA[google]]></category>
+		<category><![CDATA[google music]]></category>
+		<category><![CDATA[google play]]></category>
+		<category><![CDATA[jelly bean]]></category>
+		<category><![CDATA[lumia]]></category>
+		<category><![CDATA[microsoft]]></category>
+		<category><![CDATA[mobile apps]]></category>
+		<category><![CDATA[nexus 10]]></category>
+		<category><![CDATA[nexus 4]]></category>
+		<category><![CDATA[nexus 7]]></category>
+		<category><![CDATA[nokia]]></category>
+		<category><![CDATA[ui guidelines]]></category>
+		<category><![CDATA[user experience]]></category>
+		<category><![CDATA[user interface]]></category>
+		<guid isPermaLink="true">https://joaopescada.com/articles/breaking-android-ux-one-device-at-a-time/</guid>
+		<description><![CDATA[The added apps are mostly crapware, and the replaced ones even downgrade the original UX.]]></description>
+	</item>
+
+	<item>
+		<title>Lots of Reasons to be Creative</title>
+		<link>https://joaopescada.com/articles/lots-of-reasons-to-be-creative/?utm_source=rss&#038;utm_medium=rss</link>
+		<pubDate>Thu, 20 Sep 2012 15:52:11 +0000</pubDate>
+		<dc:creator><![CDATA[jpescada]]></dc:creator>
+		<category><![CDATA[Thoughts]]></category>
+		<category><![CDATA[conference]]></category>
+		<guid isPermaLink="true">https://joaopescada.com/articles/lots-of-reasons-to-be-creative/</guid>
+		<description><![CDATA[This conference not only includes talks about design, development, art, filmmaking, animation, etc but has also branched to two other cities, from Brighton to London and New York.]]></description>
+	</item>
+	<item>
+		<title>Photo search with PureMVC in AS3</title>
+		<link>https://joaopescada.com/articles/photo-search-with-puremvc-in-as3/?utm_source=rss&#038;utm_medium=rss</link>
+		<pubDate>Sat, 23 Apr 2011 02:09:14 +0000</pubDate>
+		<dc:creator><![CDATA[jpescada]]></dc:creator>
+		<category><![CDATA[Codes]]></category>
+		<category><![CDATA[Thoughts]]></category>
+		<category><![CDATA[Visuals]]></category>
+		<category><![CDATA[actionscript]]></category>
+		<category><![CDATA[design-patterns]]></category>
+		<category><![CDATA[flash]]></category>
+		<category><![CDATA[model-view-controller]]></category>
+		<category><![CDATA[oop]]></category>
+		<category><![CDATA[sharing]]></category>
+		<category><![CDATA[source code]]></category>
+		<guid isPermaLink="true">https://joaopescada.com/articles/photo-search-with-puremvc-in-as3/</guid>
+		<description><![CDATA[Having recently learned how to use PureMVC, this test seemed like a great way to strengthen my experience with the framework.]]></description>
+	</item>
+	<item>
+		<title>Throwing some boxes around</title>
+		<link>https://joaopescada.com/articles/throwing-some-boxes-around/?utm_source=rss&#038;utm_medium=rss</link>
+		<pubDate>Sat, 13 Nov 2010 22:33:27 +0000</pubDate>
+		<dc:creator><![CDATA[jpescada]]></dc:creator>
+		<category><![CDATA[Codes]]></category>
+		<category><![CDATA[Thoughts]]></category>
+		<category><![CDATA[actionscript]]></category>
+		<category><![CDATA[flash]]></category>
+		<category><![CDATA[jiglibflash]]></category>
+		<category><![CDATA[oop]]></category>
+		<category><![CDATA[papervision3d]]></category>
+		<category><![CDATA[shadowcaster]]></category>
+		<category><![CDATA[sharing]]></category>
+		<category><![CDATA[source code]]></category>
+
+		<guid isPermaLink="true">https://joaopescada.com/articles/throwing-some-boxes-around/</guid>
+		<description><![CDATA[So, today was &#8220;The Day&#8221; and I finally published the first source code of a &#8220;real world&#8221; project I&#8217;ve worked on this year.]]></description>
+	</item>
+
+	<item>
+		<title>Notes on FlashCamp Portugal</title>
+		<link>https://joaopescada.com/articles/notes-on-flashcamp-portugal/?utm_source=rss&#038;utm_medium=rss</link>
+		<pubDate>Tue, 05 Oct 2010 00:40:20 +0000</pubDate>
+		<dc:creator><![CDATA[jpescada]]></dc:creator>
+		<category><![CDATA[Thoughts]]></category>
+		<category><![CDATA[actionscript]]></category>
+		<category><![CDATA[conference]]></category>
+		<category><![CDATA[conferencia]]></category>
+		<category><![CDATA[flash]]></category>
+
+		<guid isPermaLink="true">https://joaopescada.com/articles/notes-on-flashcamp-portugal/</guid>
+		<description><![CDATA[The whole event was well organized, and that a lot of people invested a lot of time putting it all together.]]></description>
+	</item>
+
+	<item>
+		<title>AS3 on PureMVC, round one</title>
+		<link>https://joaopescada.com/articles/as3-on-puremvc-round-one/?utm_source=rss&#038;utm_medium=rss</link>
+		<pubDate>Wed, 06 Jan 2010 02:43:05 +0000</pubDate>
+		<dc:creator><![CDATA[jpescada]]></dc:creator>
+		<category><![CDATA[Codes]]></category>
+		<category><![CDATA[actionscript]]></category>
+		<category><![CDATA[design-patterns]]></category>
+		<category><![CDATA[flash]]></category>
+		<category><![CDATA[model-view-controller]]></category>
+		<category><![CDATA[oop]]></category>
+
+		<guid isPermaLink="true">https://joaopescada.com/articles/as3-on-puremvc-round-one/</guid>
+		<description><![CDATA[One of the biggest conclusions I found with this road I took was that allowing myself to fail, brought an enormous bandwagon of knowledge and rewarding experience.]]></description>
+	</item>
+
+	<item>
+		<title>Era uma vez um Upload</title>
+		<link>https://joaopescada.com/articles/era-uma-vez-um-upload/?utm_source=rss&#038;utm_medium=rss</link>
+		<pubDate>Thu, 19 Nov 2009 15:15:21 +0000</pubDate>
+		<dc:creator><![CDATA[jpescada]]></dc:creator>
+		<category><![CDATA[Thoughts]]></category>
+		<category><![CDATA[conference]]></category>
+		<category><![CDATA[conferencia]]></category>
+		<category><![CDATA[social media]]></category>
+		<category><![CDATA[upload lisboa]]></category>
+		<category><![CDATA[web 2.0]]></category>
+		<guid isPermaLink="true">https://joaopescada.com/articles/era-uma-vez-um-upload/</guid>
+		<description><![CDATA[This post is about a portuguese event, therefore it&#8217;s written only in portuguese.]]></description>
+	</item>
+
+	<item>
+		<title>Making time, out of tomatos</title>
+		<link>https://joaopescada.com/articles/making-time-out-of-tomatos/?utm_source=rss&#038;utm_medium=rss</link>
+		<pubDate>Tue, 10 Nov 2009 00:27:18 +0000</pubDate>
+		<dc:creator><![CDATA[jpescada]]></dc:creator>
+		<category><![CDATA[Thoughts]]></category>
+		<category><![CDATA[getting things done]]></category>
+		<category><![CDATA[gtd]]></category>
+		<category><![CDATA[pomodoro]]></category>
+		<guid isPermaLink="true">https://joaopescada.com/articles/making-time-out-of-tomatos/</guid>
+		<description><![CDATA[This system enables a lot more then just improving productivity, it increases awareness of decisions and determination to reach objectives, building motivation that will fuel more productivity.]]></description>
+	</item>
+
+</channel>
+</rss>

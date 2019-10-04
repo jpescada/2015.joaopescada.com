@@ -1,0 +1,75 @@
+<div class="modal-content">
+	
+	<a href="#" class="close-button"><span class="icon icon-cancel"></span></a>
+
+	<h3>My Availability</h3>
+	
+	Here's my calendar for the next 12 months:<br>
+	
+	<ul class="calendar">
+		<li data-month-id=""><div class="month-name"></div><div class="month-status"></div></li>
+		<li data-month-id=""><div class="month-name"></div><div class="month-status"></div></li>
+		<li data-month-id=""><div class="month-name"></div><div class="month-status"></div></li>
+		<li data-month-id=""><div class="month-name"></div><div class="month-status"></div></li>
+		<li data-month-id=""><div class="month-name"></div><div class="month-status"></div></li>
+		<li data-month-id=""><div class="month-name"></div><div class="month-status"></div></li>
+		<li data-month-id=""><div class="month-name"></div><div class="month-status"></div></li>
+		<li data-month-id=""><div class="month-name"></div><div class="month-status"></div></li>
+		<li data-month-id=""><div class="month-name"></div><div class="month-status"></div></li>
+		<li data-month-id=""><div class="month-name"></div><div class="month-status"></div></li>
+		<li data-month-id=""><div class="month-name"></div><div class="month-status"></div></li>
+		<li data-month-id=""><div class="month-name"></div><div class="month-status"></div></li>
+	</ul>
+	<ul class="key">
+		<li><span class="month-status green"></span> Available</li>
+		<li><span class="month-status yellow"></span> Partially Available</li>
+		<li><span class="month-status red"></span> Not Available</li>
+	</ul>
+
+	<div class="splitter"></div>
+
+	<br>
+
+	Did you find a spot to fit your&nbsp;project?&nbsp;Cool!<br>
+	<br>
+	<a href="/contact.html" class="button button-pink">Let’s work together</a>
+</div>
+<script>
+(function(){
+
+	'use strict';
+
+	// build calendar for next 12 months
+
+	function addZero(number){
+		if (number <= 9) {
+			number = '0'+ number;
+		}
+		return number;
+	}
+
+	var monthNames = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ],
+		currentMonth = new Date().getMonth(),
+		currentYear = new Date().getFullYear(),
+		i = 0;
+
+		$('.modal-content .calendar').empty();
+
+		for (i; i<12; i++) 
+		{
+			$('.modal-content .calendar').append(
+				'<li title="'+ monthNames[currentMonth] +' '+ currentYear +'" data-month-id="'+ currentYear +'-'+ addZero(currentMonth+1) +'">' +
+					'<div class="month-name">'+ monthNames[currentMonth].substr(0, 3) +'</div>' +
+					'<div class="month-status"></div>' +
+				'</li>'
+			);
+
+			if (currentMonth === 11){
+				currentMonth = 0;
+				currentYear++;
+			} else {
+				currentMonth++;
+			}
+		}
+})();
+</script>

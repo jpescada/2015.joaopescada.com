@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" class="lang-en">
+<head>
+
+@@include('../includes/head-meta.html',{
+	"page-title":"Photo search with PureMVC in AS3 - Article by João Pescada",
+	"page-description":"Having recently learned how to use PureMVC, this test seemed like a great way to strengthen my experience with the framework.",
+	"page-image":"https://@@cdnHost/images/article-photo-search-with-puremvc-in-as3.jpg",
+	"page-url":"https://joaopescada.com/articles/photo-search-with-puremvc-in-as3/"
+})
+
+<link rel="alternate" type="application/rss+xml" title="Letters from João" href="https://feeds.feedburner.com/joaopescada">
+<meta name="robots" content="index, follow">
+
+@@include('../includes/head-styles.html')
+
+</head>
+<body>
+
+<div class="container">
+
+	<div class="page articles articles-detail photo-search-with-puremvc-in-as3">
+
+
+		@@include('../includes/header.html', {"page":"articles"})
+
+		<h1 class="page-title lazy-load"><span>Articles</span></h1>
+
+		<h2 class="header-title lazy-load lazy-load-delay-1">
+			Photo search with PureMVC in AS3
+		</h2>
+
+		<h4 class="header-subtitle lazy-load lazy-load-delay-2">23rd April, 2011</h4>
+
+		<section id="detail" class="section section-articles-detail lazy-load lazy-load-delay-3">
+
+			<img src="/assets/images/article-photo-search-with-puremvc-in-as3.jpg" alt="" class="article-img lazy-load lazy-load-delay-4">
+
+			<article class="section-article lazy-load lazy-load-delay-6">
+
+				Since I have promised to share a <a href="http://puremvc.org/" target="_blank" rel="nofollow">PureMVC</a> site template a long time ago, and it is still bound to happen, I will now share another project I also built using the aforesaid framework.<br>
+				<br>
+				This little project was built about four months ago, to solve a skill test for a Senior Flash Developer position in a London based agency. It took around 10 hours to complete during after-work time. A working demonstration is available here: <a href="http://demo.joaopescada.com/searchable-image-gallery/" target="_blank" rel="nofollow">http://demo.joaopescada.com/searchable-image-gallery/</a>.<br>
+				<br>
+
+
+				<h3>The Project.</h3>
+
+				The test required to develop a small image gallery in Actionscript 3 storing the images set in an XML file and allowing a tag based search functionality. Also, all coding should follow <a href="http://en.wikipedia.org/wiki/Object-oriented_programming" target="_blank" rel="nofollow">Object Oriented Programming</a> through classes and Actionscript’s <a href="http://opensource.adobe.com/wiki/display/flexsdk/Coding+Conventions" target="_blank" rel="nofollow">coding conventions and best practices</a>.<br>
+				<br>
+				The visual side of the application was also important. And, in my opinion, this is a point that marks a great difference between “hardcore” developers — with strong technical skills but, usually, low sensibility to visual design – and front-end developers in general, where a Flash Developer should be included. Any good front-end developer should comfortably know the <a href="http://en.wikipedia.org/wiki/Design_elements_and_principles" target="_blank" rel="nofollow">elements and principles of design</a>.<br>
+				<br>
+
+
+				<h3>Take time defining the problem, and then solve it fast.</h3>
+
+				Having recently learned how to use PureMVC, this test seemed like a great way to strengthen my experience with the framework. It was fairly simple and only had to implement a couple of basic actions: show the photos with or without a tag filter applied and show each photo in detail.<br>
+				<br>
+				For the visual layout, I opted for a grid-less structure simulating a real life environment: a wood floor with the photos scattered all over. It wasn’t the most common solution, but it was still easy to use and hopefully eye-candy enough to stand out from the crowd (the other developers applying for the same position).<br>
+				<br>
+
+
+				<h3>The architecture.</h3>
+
+				As any regular <a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller" target="_blank" rel="nofollow">MVC</a> project, the classes needed to be grouped in three folders / packages: <code>model</code> (storing all the data that the app will need), <code>view</code> (where anything-visual is kept and the user actions are captured) and <code>controller</code> (providing communication between <code>view</code> and <code>model</code>).<br>
+				<br>
+				The stage was created in a single Flash file using the <code>Main</code> class as the document class, with all the visual assets in the library being linked to classes in the <code>view</code> package.<br>
+				<br>
+
+
+				<h3>Gluing it all together.</h3>
+
+				From this point on, you should have the source code nearby in order to check it as I briefly explain the logic behind it. The source code is available to browse and download at my GitHub repository: <a href="https://github.com/jpescada/PureMVC-AS3-Searchable-Image-Gallery" target="_blank" rel="nofollow">https://github.com/jpescada/PureMVC-AS3-Searchable-Image-Gallery</a>.<br>
+				<br>
+
+
+				<h3>Startup and the Controller.</h3>
+
+				It all starts in the <code>Main</code> class in the <code>app</code> package.
+
+				As soon as the stage is available, the <code>AppFacade</code> singleton is fired, initialising the PureMVC framework, overriding the <code>sendNotification</code> method — to allow debug control, by tracing the notification arguments — and registering the possible controller command calls with specific notifications:<br>
+				– the <code>StartupCommand</code> is triggered by the <code>STARTUP</code> notification. It registers and initialises the data sources available (<code>StageProxy</code>, <code>StateProxy</code> and <code>PhotosProxy</code>), and the <code>AppMediator</code> (attaching it to the stage) and then requests a new photo search, without any filter applied, to populate the initial layout.<br>
+				– the <code>PhotoSearchCommand</code> will listen for <code>PHOTO_SEARCH</code> notifications, handling all searches, through the <code>PhotosProxy</code>.<br>
+				– the <code>PhotoDetailCommand</code> will respond to <code>SHOW</code> and <code>HIDE</code> notifications, setting the app state using the <code>StateProxy</code>, and showing or hiding the detail of a photo.<br>
+				<br>
+
+
+				<h3>The Model.</h3>
+
+				The <code>StageProxy</code> allows access to the app stage, and dispatches notifications every time the stage is resized.<br>
+				The <code>StateProxy</code> works as a central point to store information about the current state of the app. Namely the current photo selected, if any, and dispatches notification when the state is changed.<br>
+				The <code>PhotosProxy</code> loads and provides methods to access the information stored in the XML, like <code>search</code> and returns the result coupled to a <code>PHOTO_SEARCH_RESULT</code> notification.<br>
+				<br>
+
+
+				<h3>And the View.</h3>
+
+				The <code>AppMediator</code> registers mediators for the visual components of the layout: the <code>GalleryMediator</code>, the <code>SearchBoxMediator</code> and the <code>DetailMediator</code>.<br>
+				<br>
+				The <code>GalleryMediator</code> controls the <code>gallery</code> movieclip on the stage, that will load and display the photo thumbnails. It subscribes to <code>PHOTO_CHANGED</code>, <code>PHOTO_SEARCH_RESULT</code> and <code>STAGE_RESIZE</code> notifications in order to update the <code>gallery</code> movieclip as needed. It also listens for clicks in the photo thumbnails and dispatches notifications to the <code>AppMediator</code> when it happens.<br>
+				<br>
+				The <code>SearchBoxMediator</code> holds a reference to the <code>searchBox</code> movieclip on the stage. It subscribes to <code>PHOTO_SEARCH_RESULT</code> and <code>STAGE_RESIZE</code> notifications and dispatches a <code>PHOTO_SEARCH</code> notification when the user submits the search.<br>
+				<br>
+				The <code>DetailMediator</code> is linked to the <code>detail</code> movieclip on the stage, updating the display when the subscribed notifications <code>PHOTO_CHANGED</code> or <code>STAGE_RESIZE</code> are received, and dispatches a <code>PHOTO_HIDE</code> notification when the user clicks on the <code>detail</code> movieclip.<br>
+				<br>
+				All the visual components in the library linked to classes in the <code>app.view.components</code> package have simple methods to update the display or dispatch custom events that will then be picked up by the associated mediators and processed as need be.<br>
+				<br>
+
+
+				<h3>Wrapping up.</h3>
+
+				This was an overview of the logic behind the app.<br>
+				Feel free to browse and change the code to see what happens and learn with it.<br>
+				If you end up facing problems or doubts, just drop me an email or comment using the form bellow and I will happily give you all the help needed.<br>
+				<br>
+				Again, the <strong>source code</strong> is available here:<br>
+				<a href="https://github.com/jpescada/PureMVC-AS3-Searchable-Image-Gallery" target="_blank" rel="nofollow">https://github.com/jpescada/PureMVC-AS3-Searchable-Image-Gallery</a>.<br>
+				<br>
+				and the <strong>working demo</strong> here:<br>
+				<a href="http://demo.joaopescada.com/searchable-image-gallery/" target="_blank" rel="nofollow">http://demo.joaopescada.com/searchable-image-gallery/</a><br>
+				<br>
+				Thanks for reading this article!<br>
+				<br>
+				<br>
+				<br>
+				<br>
+
+
+
+
+			</article>
+
+		</section>
+
+
+
+		@@include('../includes/footer.html', {"load-delay":"7"})
+
+	</div>
+
+</div>
+
+@@include('../includes/scripts-bottom.html')
+
+</body>
+</html>

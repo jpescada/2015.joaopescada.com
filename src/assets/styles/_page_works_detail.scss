@@ -1,0 +1,463 @@
+.works-detail {
+
+	.section-detail {
+		// padding: 102px 0;
+		margin-top: 36px;
+
+		&:before {
+			content: '';
+			display: block;
+			width: 100%;
+			max-width: 1114px;
+			height: 48px;
+			position: absolute;
+			left: 50%;
+			top: -15px;
+			transform: translateX(-50%);
+			z-index: 2;
+			background: url(/assets/images/section-limiter-4@2x.png) no-repeat center;
+			background-size: 1114px 48px;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			width: 100%;
+			max-width: 1096px;
+			height: 51px;
+			position: absolute;
+			left: 50%;
+			bottom: -25px;
+			transform: translateX(-50%);
+			z-index: 2;
+			background: url(/assets/images/section-limiter-3@2x.png) no-repeat center;
+			background-size: 1096px 51px;
+		}
+
+		.section-header-title {
+			transform: translateZ(0);
+			text-align: center;
+			padding: 38px 0 0 0;
+
+			h3 {
+				text-align: center;
+				font-size: 36px;
+				line-height: 36px;
+				margin: 42px 0 0 0;
+				padding: 0;
+			}
+
+			h4 {
+				font-family: $font-stack-body;
+				font-size: 16px;
+				line-height: 24px;
+				margin: 18px 0 0 0;
+				color: #999999;
+			}
+		}
+
+		.section-header-figure {
+			transform: translateZ(0);
+			text-align: center;
+		}
+
+		.ipad-mockup {
+			width: 300px;
+			height: 218px;
+			border-radius: 10px;
+			background: #2B2B2B;
+			box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.50), 0px 0px 4px 0px rgba(0,0,0,0.25);
+			margin: 42px auto 0 auto;
+			transition: transform 0.75s $ease-out-back;
+
+			.project-preview {
+				width: 250px;
+				margin: 15px auto 0 auto;
+			}
+		}
+
+		.tv-mockup {
+			width: 300px;
+			height: 182px;
+			border-radius: 5px;
+			background: #2B2B2B;
+			box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.50), 0px 0px 4px 0px rgba(0,0,0,0.25);
+			margin: 42px auto 0 auto;
+			transition: transform 0.75s $ease-out-back;
+
+			.project-preview {
+				width: 290px;
+				margin: 5px auto 0 auto;
+			}
+		}
+
+		.iphone-mockup {
+			width: 252px;
+			height: 520px;
+			background: #2B2B2B;
+			box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.50), 0px 0px 4px 0px rgba(0,0,0,0.25);
+			border-radius: 25px;
+			margin: 42px auto 0 auto;
+			transition: transform 0.75s $ease-out-back;
+
+			.project-preview {
+				width: 232px;
+				margin: 50px auto 0 auto;
+			}
+		}
+
+		.android-mockup {
+			width: 175px;
+			height: 352px;
+			background: #2B2B2B;
+			box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.50), 0px 0px 4px 0px rgba(0,0,0,0.25);
+			border-radius: 15px;
+			margin: 42px auto 0 auto;
+			transition: transform 0.75s $ease-out-back;
+
+			.project-preview {
+				width: 160px;
+				margin: 35px auto 0 auto;
+			}
+		}
+
+		.website-mockup {
+			position: relative;
+			width: 300px;
+			background-color: #C6C5C5;
+			color: $section-dark-bg;
+			box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.50), 0px 0px 4px 0px rgba(0,0,0,0.25);
+			border-top-right-radius: 3px;
+			border-top-left-radius: 3px;
+			margin: 42px auto 0 auto;
+			transition: transform 0.75s $ease-out-back;
+
+			&:before {
+				content: '\25CF \25CF \25CF';
+				display: block;
+				position: absolute;
+				top: -4px;
+				left: 5px;
+				font-size: 10px;
+				letter-spacing: 0.1em;
+			}
+
+			.project-preview {
+				width: 300px;
+				margin: 15px auto -6px auto;
+			}
+		}
+
+		.mockup-group {
+			position: relative;
+			margin: 42px auto 0 auto;
+
+			&.iphones-group {
+				.iphone-mockup {
+					display: inline-block;
+					margin: 0 10px 24px 10px;
+				}
+			}
+
+			&.iphone-website-group {
+				width: 800px;
+				height: 560px;
+
+				.iphone-mockup {
+					position: absolute;
+					z-index: 2;
+					top: 200px;
+					left: 20px;
+					margin: 0;
+					width: 178px;
+					height: 366px;
+
+					.project-preview {
+						width: 164px;
+					}
+				}
+
+				.website-mockup {
+					position: absolute;
+					z-index: 1;
+					top: 0;
+					right: auto;
+					left: 40px;
+					margin: 0;
+					padding: 0;
+					width: 712px;
+					transition-delay: 0.1s;
+
+					.project-preview {
+						width: 712px;
+						margin-bottom: -6px;
+					}
+				}
+
+			}
+
+			&.android-iphone-website-group {
+				width: 840px;
+				height: 560px;
+
+				.android-mockup {
+					position: absolute;
+					z-index: 3;
+					margin: 0;
+					top: 204px;
+					left: 20px;
+				}
+
+				.iphone-mockup {
+					position: absolute;
+					z-index: 2;
+					top: 220px;
+					left: 220px;
+					margin: 0;
+					width: 162px;
+					height: 336px;
+					transition-delay: 0.1s;
+
+					.project-preview {
+						width: 150px;
+						margin-top: 30px;
+					}
+				}
+
+				.website-mockup {
+					position: absolute;
+					z-index: 1;
+					top: 0;
+					right: 0;
+					margin: 0;
+					width: 712px;
+					transition-delay: 0.2s;
+
+					.project-preview {
+						width: 712px;
+						margin-bottom: -6px;
+					}
+				}
+			}
+
+
+		}
+
+		.section-article {
+
+			h4 {
+				font-size: 36px;
+				line-height: 48px;
+				text-align: center;
+				margin: 42px auto 24px auto;
+			}
+
+			@include feedback-quote();
+
+			a:not(.button) {
+				@include smart-link($colour-dark-grey, $colour-pink);
+			}
+
+			.button {
+				// background-image: none;
+				white-space: nowrap;
+			}
+		}
+	}
+
+
+	.section-help {
+		position: relative;
+		z-index: 10;
+
+		.section-article {
+			text-align: center;
+		}
+	}
+
+	@include tablet {
+
+		.section-detail {
+
+			.section-header-title {
+				h3 {
+					font-size: 48px;
+					line-height: 48px;
+				}
+
+				h4 {
+					font-size: 18px;
+					line-height: 30px;
+				}
+			}
+
+			.ipad-mockup {
+				width: 700px;
+				height: 510px;
+				border-radius: 20px;
+
+				.project-preview {
+					width: 600px;
+					margin: 30px auto 0 auto;
+				}
+			}
+
+			.tv-mockup {
+				width: 700px;
+				height: 425px;
+				border-radius: 5px;
+
+				.project-preview {
+					width: 680px;
+					margin: 10px auto 0 auto;
+				}
+			}
+
+			.website-mockup {
+				width: 700px;
+				border-top-right-radius: 5px;
+				border-top-left-radius: 5px;
+
+				&:before {
+					top: 3px;
+					left: 10px;
+					font-size: 16px;
+					letter-spacing: 0.1em;
+				}
+
+				.project-preview {
+					width: 700px;
+					margin: 30px auto -6px auto;
+				}
+			}
+
+			.mockup-group {
+
+				&.iphones-group {
+					.iphone-mockup {
+						margin: 0 10px;
+					}
+				}
+
+				&.iphone-website-group {
+
+					.iphone-mockup {
+						left: 20px;
+					}
+
+					.website-mockup {
+						right: 0;
+						left: auto;
+					}
+
+				}
+
+				&.android-iphone-website-group {
+					.android-mockup {
+						left: 30px;
+					}
+
+					.iphone-mockup {
+						left: 230px;
+					}
+				}
+			}
+
+		}
+	}
+
+	@include desktop {
+
+		.section-detail {
+
+			.section-header-title {
+				h3 {
+					font-size: 48px;
+					line-height: 48px;
+				}
+
+				h4 {
+					font-size: 18px;
+					line-height: 30px;
+				}
+			}
+
+			.ipad-mockup {
+				width: 800px;
+				height: 578px;
+				border-radius: 25px;
+
+				.project-preview {
+					width: 664px;
+					margin: 39px auto 0 auto;
+				}
+			}
+
+			.tv-mockup {
+				width: 800px;
+				height: 490px;
+				border-radius: 5px;
+
+				.project-preview {
+					width: 758px;
+					margin: 20px auto 0 auto;
+				}
+			}
+
+			.website-mockup {
+				width: 800px;
+				border-top-right-radius: 8px;
+				border-top-left-radius: 8px;
+
+				&:before {
+					top: 5px;
+					left: 10px;
+					font-size: 18px;
+					letter-spacing: 0.1em;
+				}
+
+				.project-preview {
+					width: 800px;
+					margin: 35px auto -6px auto;
+				}
+			}
+
+			.mockup-group {
+
+				&.iphones-group {
+					.iphone-mockup {
+						margin: 0 10px;
+					}
+				}
+
+				&.iphone-website-group {
+
+					.iphone-mockup {
+						left: 0;
+					}
+
+					.website-mockup {
+						right: 0;
+						left: auto;
+					}
+
+				}
+
+				&.android-iphone-website-group {
+					.android-mockup {
+						left: 0;
+					}
+
+					.iphone-mockup {
+						left: 200px;
+					}
+				}
+			}
+
+
+
+		}
+
+	}
+
+}

@@ -1,0 +1,165 @@
+.modal-availability {
+	width: 300px;
+	height: 550px;
+	margin-top: -275px;
+	margin-left: -150px;
+	font-family: $font-stack-body;
+	font-size: 18px;
+	line-height: 30px;
+	text-align: center;
+
+	.close-button {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		text-decoration: none;
+		color: rgba($colour-dark-grey, 0.6);
+		width: 30px;
+		height: 30px;
+		padding: 8px 8px;
+		font-size: 13px;
+		line-height: 14px;
+		// background-color: pink;
+		border: 1px solid rgba($colour-dark-grey, 0);
+		border-radius: 50%;
+		transition: color 0.25s ease, border-color 0.25s ease;
+
+		&:hover {
+			color: $colour-dark-grey;
+			border-color: $colour-dark-grey;
+		}
+	}
+
+	h3 {
+		font-family: $font-stack-title;
+		font-size: 36px;
+		line-height: 48px;
+		margin: 36px auto 24px auto;
+	}
+
+	.month-status {
+		display: block;
+		width: 42px;
+		height: 42px;
+		background-color: $colour-calendar-green;
+
+		&.green { background-color: $colour-calendar-green; }
+		&.yellow { background-color: $colour-calendar-yellow; }
+		&.red { background-color: $colour-calendar-red; }
+	}
+
+	.calendar {
+		list-style: none;
+		margin: 12px 0 0 0;
+		padding: 0;
+
+		li {
+			margin: 0 4px 0 0;
+			padding: 0;
+			display: inline-block;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			.month-name {
+				display: block;
+				font-family: $font-stack-small;
+				font-size: 12px;
+				line-height: 18px;
+				text-align: center;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.key {
+		list-style: none;
+		margin: 18px 0 0 0;
+		padding: 0;
+		font-family: $font-stack-small;
+		font-size: 12px;
+		line-height: 18px;
+		display: none;
+
+		li {
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+			margin-right: 20px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			.month-status {
+				display: inline-block;
+				width: 12px;
+				height: 12px;
+				vertical-align: -1px;
+				margin-right: 2px;
+			}
+		}
+	}
+
+	.splitter {
+		width: 100%;
+		max-width: 1123px;
+		height: 24px;
+		background: url(/assets/images/section-limiter-6@2x.png) no-repeat center;
+		background-size: 1123px 24px;
+		margin: 42px auto 12px auto;
+		display: none;
+	}
+
+	.button {
+		margin-bottom: 30px;
+	}
+
+	@include tablet {
+		width: 650px;
+		height: 550px;
+		margin-top: -275px;
+		margin-left: -325px;
+
+		h3 {
+			margin: 48px auto 24px auto;
+		}
+
+		.calendar {
+			margin: 24px 0 0 0;
+		}
+
+		.key {
+			display: block;
+		}
+
+		.splitter {
+			display: block;
+		}
+	}
+
+	@include desktop {
+		width: 650px;
+		height: 550px;
+		margin-top: -275px;
+		margin-left: -325px;
+
+		h3 {
+			margin: 48px auto 24px auto;
+		}
+
+		.calendar {
+			margin: 24px 0 0 0;
+		}
+
+		.key {
+			display: block;
+		}
+
+		.splitter {
+			display: block;
+		}
+	}
+
+}

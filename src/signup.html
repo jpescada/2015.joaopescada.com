@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="lang-en">
+<head>
+
+@@include('./includes/head-meta.html',{
+	"page-title":"Sign up for Thoughts &amp; Workarounds by João Pescada",
+	"page-description":"Join a little community of avid readers and thinkers.",
+	"page-image":"https://@@cdnHost/images/social-share.jpg",
+	"page-url":"https://joaopescada.com/signup/"
+})
+
+<meta name="robots" content="index, follow">
+
+@@include('./includes/head-styles.html')
+
+</head>
+<body>
+
+<div class="container">
+
+	<div class="page signup">
+
+
+		@@include('./includes/header.html', {"page":"signup"})
+
+		<h1 class="page-title lazy-load"><span>Thoughts &amp; Workarounds</span></h1>
+
+		<h2 class="header-title lazy-load lazy-load-delay-1">
+			Articles on creating digital&nbsp;products, <br>
+			finding a good work-life&nbsp;balance <br>
+			and just being a&nbsp;better&nbsp;human.
+		</h2>
+
+
+
+		<section id="intro" class="section section-intro lazy-load lazy-load-delay-2">
+
+			<div class="section-dark-background"></div>
+
+			<article class="section-article">
+
+				<h3>A new article only&nbsp;when&nbsp;it’s&nbsp;worthy</h3>
+
+				I’m not a professional writer, but I like writing.<br>
+				Maybe even more than I like reading <em>(I'll have to test this theory later)</em>.<br>
+				<br>
+				But in the same way I don’t like talking just for the sake of it, I also don’t like writing without having a relevant message.<br>
+				<br>
+				Everyone can give some sort of advice. But only when the adviser has relevant experience, the advice actually becomes of value. Well, this assuming the receiver also feels he needs the advice.<br>
+				<br>
+				That’s also why I limit my writings to only up to two new articles per month, likely just one. This way I can focus on particular subjects, deliver good pieces and maybe help someone get better at something.<br>
+				<br>
+				The other reason is that this is still new to me. <br>
+				So I rather keep a slow and steady pace. And let this good habit sink in, instead of forcing it and throwing it out the window.<br>
+				<br>
+
+
+			</article>
+
+		</section>
+
+
+
+		<section id="join" class="section section-join lazy-load lazy-load-delay-3">
+
+			<article class="section-article">
+
+				<h3>Interested?</h3>
+
+				If you’re interested in joining a little community of avid readers and thinkers, please sign up for my private email list using the form below. <br>
+				<br>
+				And please remember, after submiting your email address, to check your inbox for a confirmation email and click on the link included. Thank you!<br>
+				<br>
+
+				<div class="centred">
+					@@include('./includes/form-mailchimp-subscribe.html')
+				</div>
+
+			</article>
+
+		</section>
+
+
+
+		<section id="who" class="section section-who lazy-load lazy-load-delay-4">
+
+			<div class="section-dark-background"></div>
+
+			<article class="section-article">
+
+				<h3>“Who’s this&nbsp;guy?”</h3>
+
+				@@include('./includes/profile-products.html')
+
+				<br>
+				<br>
+				<br>
+
+			</article>
+
+		</section>
+
+
+	</div>
+
+</div>
+
+@@include('./includes/scripts-bottom.html')
+
+</body>
+</html>

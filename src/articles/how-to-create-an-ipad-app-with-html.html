@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" class="lang-en">
+<head>
+
+@@include('../includes/head-meta.html',{
+	"page-title":"How to create an iPad app with HTML - Article by João Pescada",
+	"page-description":"The main idea you should follow when developing your app is to use HTML5 and CSS3 for visuals and Javascript for logic and interaction with the device hardware.",
+	"page-image":"https://@@cdnHost/images/article-how-to-create-an-ipad-app-with-html.jpg",
+	"page-url":"https://joaopescada.com/articles/how-to-create-an-ipad-app-with-html/"
+})
+
+<link rel="alternate" type="application/rss+xml" title="Letters from João" href="https://feeds.feedburner.com/joaopescada">
+<meta name="robots" content="index, follow">
+
+@@include('../includes/head-styles.html')
+
+</head>
+<body>
+
+<div class="container">
+
+	<div class="page articles articles-detail how-to-create-an-ipad-app-with-html">
+
+
+		@@include('../includes/header.html', {"page":"articles"})
+
+		<h1 class="page-title lazy-load"><span>Articles</span></h1>
+
+		<h2 class="header-title lazy-load lazy-load-delay-1">
+			How to create an iPad app with HTML
+		</h2>
+
+		<h4 class="header-subtitle lazy-load lazy-load-delay-2">26th July, 2013</h4>
+
+		<section id="detail" class="section section-articles-detail lazy-load lazy-load-delay-3">
+
+			<img src="/assets/images/article-how-to-create-an-ipad-app-with-html.jpg" alt="" class="article-img lazy-load lazy-load-delay-4">
+
+			<article class="section-article lazy-load lazy-load-delay-6">
+
+				Based on <a href="/works">my recent experience in developing enterprise iPad apps</a> and the ever-growing market hunger for tablet apps, I decided to share my knowledge and write down a quick guide to the process.<br>
+				<br>
+				This guide is aimed at those who know their way around HTML, CSS and Javascript (maybe even at a beginner level), and would like to create iPad and iPhone apps but just don’t have the time to invest in learning specific and complex programming languages, like Objective-C.<br>
+				<br>
+
+
+				<h3 id="tools">Get your tools ready</h3>
+
+				First things first: let’s make sure you have the correct tools for the job.<br>
+				In matters of hardware, you’ll need an Intel-based Mac computer running on Mac OS Lion (or greater) as well as an iPad (if you want to have the app installed on an actual device, <a href="#deploy-to-devices">but more on that later</a>).<br>
+				<br>
+				On the software department, there are two <strong>required apps</strong>:<br>
+				<br>
+
+				<strong>Xcode</strong><br>
+				The goto-IDE for anything that runs on Apple devices. You’ll need Xcode not only to test the app on the iOS Simulator but also to install and run it on devices. And being a code editor, you can also use it for HTML / CSS / Javascript.<br>
+				Get it from the <a href="http://itunes.apple.com/app/xcode/id497799835?mt=12" target="_blank" rel="nofollow">Mac App Store</a>.<br>
+				After installing Xcode, you’ll also need to install the Command Line Tools (Xcode Preferences > Downloads > Components > Command Line Tools > Install).<br>
+				<br>
+
+				<strong>PhoneGap</strong><br>
+				Bought by Adobe a couple of years ago, this framework is the secret ingredient that allows HTML developers to build iOS apps without knowing any Objective-C at all. It’s based on <a href="http://cordova.apache.org/" target="_blank" rel="nofollow">Apache Cordova</a> (hence why you’ll see references to it later).<br>
+				Get the latest release from <a href="http://phonegap.com/install/" target="_blank" rel="nofollow">PhoneGap.com</a>.<br>
+				After installing PhoneGap (using <a href="http://nodejs.org/" target="_blank" rel="nofollow">Node.js</a>), go ahead and install the Cordova command line tool. On Terminal.app, run the following command:<br>
+				<code>$ sudo npm install -g cordova</code><br>
+				<br>
+
+				This one is <strong>optional</strong>, and also a personal preference, but you should have a good code editor for HTML / CSS / Javascript. There are many options available (some free, others not so much) but if you — like me — prefer a code editor lighter than the heavy-weight-champion Xcode, these are the ones I can recommend, just pick one: <a href="http://macromates.com/" target="_blank" rel="nofollow">TextMate 2.0</a>, <a href="http://www.sublimetext.com/" target="_blank" rel="nofollow">Sublime Text</a>, <a href="http://panic.com/coda/" target="_blank" rel="nofollow">Coda 2</a>, <a href="http://brackets.io/" target="_blank" rel="nofollow">Brackets</a> and the good ol’ <a href="http://www.barebones.com/products/textwrangler/" target="_blank" rel="nofollow">TextWrangler</a>.<br>
+				<br>
+
+
+				<h3 id="scaffolding">A bit of scaffolding</h3>
+
+				Yup. Let’s get this project off the ground!<br>
+				Once your tools are installed and ready to roll, you’ll need to create your PhoneGap project for Xcode that will allow you to test and run your app on both iOS Simulator and devices, as well as deploying your app for App Store, Ad-Hoc or Enterprise Distribution.<br>
+				<br>
+
+				For the sake of your own peace of mind, it’s best to keep things organised, so make sure you save all project related assets in a single folder.<br>
+				For me, that’s a folder named after the project, inside the Projects folder, which lives inside my Documents folder, so my project folder path ends up like this:<br>
+				<code>~/Documents/Projects/ProjectName</code><br>
+				<br>
+
+				Assuming you already installed Xcode, PhoneGap and the required command line tools, you are now only two commands away from having the iOS app up and running. The first one generates the project folder with all required PhoneGap assets and the second creates the actual project to open in Xcode and deploy to devices.<br>
+				<br>
+
+				To generate the PhoneGap project you need to specify three <code>parameters</code>:<br>
+				1. <code>&lt;project_folder_path&gt;</code>: where all the project assets will be saved (it must be empty, if it exists already)<br>
+				2. <code>&lt;package_name&gt;</code>: must be unique, as it identifies the app (follow a <a href="http://en.wikipedia.org/wiki/Reverse_domain_name_notation" target="_blank" rel="nofollow">reverse domain convention</a>, eg: <code>com.mydomain.MyApp</code>)<br>
+				3. <code>&lt;project_name&gt;</code>: whatever name you want, eg: <code>"MyApp"</code><br>
+				<br>
+
+				And use them with the command cordova create, as such:<br>
+				<code>$ cordova create &lt;project_folder_path&gt; &lt;package_name&gt; &lt;project_name&gt;</code><br>
+				<br>
+
+				Let’s give this project the very creative name of… “HelloWorld”! Yes, unheard of.<br>
+				As per my suggestion above, the <code>&lt;project_folder_path&gt;</code> can be <code>~/Documents/Projects/HelloWorld</code> and the unique <code>&lt;package_name&gt;</code> can be <code>com.example.HelloWorld</code>.<br>
+				<br>
+
+				So in Terminal.app, run the following:<br>
+				<code>$ cordova create ~/Documents/Projects/HelloWorld com.example.HelloWorld "HelloWorld"</code><br>
+				<br>
+
+				If you then browse to <code>~/Documents/Projects/HelloWorld</code>, you should find four sub-folders inside: <code>merges</code>, <code>platforms</code>, <code>plugins</code> and <code>www</code>.<br>
+				All there? Cool! That’s step one.<br>
+				<br>
+
+				In step two, you specify the target platforms your app will support.<br>
+				Since we’re aiming to build an iPad app, we only need the iOS platform.<br>
+				Back to Terminal.app!<br>
+				<br>
+
+				Browse to the newly created project folder with the command:<br>
+				<code>$ cd ~/Documents/Projects/HelloWorld</code><br>
+				<br>
+
+				And then add support to the iOS platform:<br>
+				<code>$ cordova platform add ios</code><br>
+				<br>
+
+				Your app is ready to run on the iOS Simulator!<br>
+				<br>
+
+				Just open the file <code>Hello World.xcodeproj</code> in the folder <code>~/Documents/Projects/HelloWorld/platforms/ios</code> and hit that big Play button on the top left corner of Xcode.<br>
+				<br>
+
+				Boom! Done.<br>
+				<br>
+
+				What you should be seeing now in the iOS Simulator is an iOS app built using just the HTML / CSS / Javascript from the <code>www</code> folder <strong>in that same</strong> <code>ios</code> folder.<br>
+				<br>
+
+				When you are done looking at this little gem, hit the Stop button in top left corner of Xcode to stop the simulation.<br>
+				<br>
+
+				For now, you can ignore the <code>www></code> folder in the root of the project folder (outside the <code>ios</code> folder). But later, specially when developing an app for multiple platforms (eg: iOS + Android), you’ll want to update only this <code>www</code> folder instead of the one(s) inside the platform specific folder (<code>ios/www</code> or <code>android/www</code>) and run the <code>prepare [platform]</code> command to update the modified files in the platform’s <code>www</code> folder, like so:<br>
+				<code>$ cordova prepare ios</code> or <code>$ cordova prepare android</code><br>
+				<br>
+
+				<h3 id="creating-your-app">Creating your app</h3>
+
+				Now that we have a basic iOS app running, it’s time to start playing with it and learn with the process.<br>
+				<br>
+				If you look into the contents of the <code>ios/www</code> folder:<br>
+
+				<img src="/assets/images/article-how-to-create-an-ipad-app-with-html-1.png" alt="" class="article-body-img"><br>
+				<br>
+
+				You’ll find the structure of a basic web app:<br>
+				<code>css:</code> CSS stylesheets<br>
+				<code>img:</code> images<br>
+				<code>js:</code> Javascript files<br>
+				<code>res:</code> app resources, like splash-screens and icons<br>
+				<code>spec:</code> <a href="http://pivotal.github.io/jasmine/" target="_blank" rel="nofollow">Jasmine</a> tests<br>
+				<code>config.xml:</code> to compile your app in the cloud using <a href="http://build.phonegap.com/" target="_blank" rel="nofollow">PhoneGap Build</a><br>
+				<code>cordova_plugins.js:</code> a <a href="http://en.wikipedia.org/wiki/JSON" target="_blank" rel="nofollow">JSON</a> list of the Cordova plugins installed<br>
+				<code>cordova.js:</code> the Cordova Javascript library to interact with the device<br>
+				<code>index.html:</code> the web app’s start page<br>
+				<code>spec.html:</code> to run the Jasmine tests set in the <code>spec</code> folder<br>
+				<br>
+
+				The main idea you should follow when developing your app is to use HTML5 and CSS3 for visuals and Javascript for logic and interaction with the device hardware.<br>
+				<br>
+
+				As an example, let’s add a bit more of logic to the <code>ios/www/js/index.js</code> file:<br>
+				In the function <code>onDeviceReady</code> (triggered when plugins have been loaded and device is ready), after <code>app.receivedEvent('deviceready');</code> add the following line:<br>
+				<br>
+
+				<code>document.body.getElementsByClassName("app")[0].addEventListener('click', app.onTap);</code><br>
+				<br>
+
+				This attaches a function to the <code>click</code> event on the first element in the DOM with a class named <code>app</code>.<br>
+				<br>
+				Then right after the closing bracket (<code>}</code>) of the same <code>onDeviceReady</code> function, add this function (including the comma (<code>,</code>) in the beginning):<br>
+				<br>
+
+				<code class="block">
+				,<br>
+				onTap: function(e) {<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;var randomColor = '#'+ Math.floor(Math.random()*16777215).toString(16);<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;document.body.style.backgroundImage = 'none';<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;document.body.style.backgroundColor = randomColor;<br>
+				}<br>
+				</code><br>
+				<br>
+
+				This defines the function attached to the <code>click</code> event:<br>
+				Once a user clicks / taps on the <code>app</code> element (that little bot) the background of the app will change into a random colour.<br>
+
+				On Xcode, hit the Play / Run button to see this code change in effect.<br>
+				Like it? No? Meh?<br>
+				<br>
+
+				Let’s also add a little CSS3 touch to create a visual transition between the background colours. <br>
+				Open the <code>ios/www/css/index.css</code> file and on the style definition for the <code>body</code> tag just add this line:<br>
+				<br>
+				<code>-webkit-transition: all 0.5s;</code><br>
+				<br>
+				Now with every tap on the bot, the background will smoooooothly fade into a randomly picked colour. Yey!<br>
+				<br>
+
+				Alright, al-right! So there are many more things that can be done using this framework, but the purpose here it just to get you into the basics of using PhoneGap for iOS development, therefore I will not get much more deeper into this, as the actual process of creating an app, from concept to design and production is a lengthy one and this post is already getting too long, but I’ll write more posts focusing on these steps later.<br>
+				<br>
+
+				Before wrapping up this post, let’s just get on two related topics: <a href="#phonegap-3-plugins">PhoneGap 3 plugins</a> and <a href="#deploy-to-devices">deploying your app into an actual device</a>.<br>
+				<br>
+
+				<h3 id="phonegap-3-plugins">Plugins on PhoneGap 3.0</h3>
+
+				It’s important to note (before you start pulling your hair out) that, due to the <a href="http://phonegap.com/blog/2013/07/19/adobe-phonegap-3.0-released/" target="_blank" rel="nofollow">new plugin architecture of PhoneGap 3.0</a>, none of the plugins are installed by default in the project. This means that if you need to access device resources (like accelerometer or camera), you have to install a plugin first.<br>
+				<br>
+
+				One of the plugins I recommend installing for all projects is the debug Console, which allows you to use c<code>onsole.log()</code> to send messages to both Xcode and Safari browser on the computer running the iOS Simulator or connected to the iOS device (provided that you <a href="http://developer.apple.com/library/safari/#documentation/AppleApplications/Reference/SafariWebContent/DebuggingSafarioniPhoneContent/DebuggingSafarioniPhoneContent.html" target="_blank" rel="nofollow">enabled the Web Inspector in iOS</a>).<br>
+				<br>
+
+				To install the Console plugin, browse to the project folder with the command:<br>
+				<code>$ cd ~/Documents/Projects/HelloWorld</code><br>
+				<br>
+
+				And then add the Console plugin with the <code>plugin add</code> command:<br>
+				<code>$ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git</code><br>
+				<br>
+
+				For a complete list of plugins, check the <a href="http://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html#The%20Command-line%20Interface_add_features" target="_blank" rel="nofollow">PhoneGap 3.0 CLI docs</a>.<br>
+				<br>
+
+				<h3 id="deploy-to-devices">How to get the app on iOS devices</h3>
+
+				This is where the “free” ride ends, unfortunately.<br>
+				To get past this and run your app on your iPad or iPhone, you’ll need to get a developer’s license through Apple’s <a href="https://developer.apple.com/programs/ios/" target="_blank" rel="nofollow">iOS Developer Program</a>.<br>
+				<br>
+				This license allows you to generate code signing certificates (aka Provisioning profiles) that will be embedded in the compiled app, and are required to run any iOS app on a real device and later submit it to the App Store.<br>
+				<br>
+				Once you got your developer license, follow the <a href="http://developer.apple.com/iphone/manage/overview/index.action" target="_blank" rel="nofollow">instructions on the Apple Developers site</a> to create and install the Provisioning profiles.<br>
+				<br>
+
+
+				<h3>It’s a wrap!</h3>
+
+				There you have it! An overview of how to create an iPad or iPhone app using just HTML / CSS / Javascript with the help of this great framework called PhoneGap.<br>
+				<br>
+				On another post, we’ll dive deeper into PhoneGap, the hardware capabilities of the device and other developer friendly tools like <a href="https://testflightapp.com/" target="_blank" rel="nofollow">TestFlightApp</a>.<br>
+				<br>
+				Until then, keep fiddling with it!<br>
+				Thanks for reading.<br>
+				<br>
+				<div class="shameless-plug"><a href="/contact.html"><span class="icon icon-chat"></span>Need help creating your app? Just ping me your details.</a></div>
+				<br>
+				<br>
+				<strong>Update on 29/07/2013:</strong><br>
+				Removed spaces from “MyApp” and “HelloWorld” referenced above, when creating a new project with the <code>cordova create</code> command, as Android SDK isn’t very fond of that.<br>
+				<br>
+				<strong>Update on 22/08/2013:</strong><br>
+				Make sure to include FastClick to kill that 300ms click delay that might make your app look slow to respond. Get it from <a href="http://labs.ft.com/" target="_blank" rel="nofollow">FT Labs</a>’ GitHub repo: <a href="https://github.com/ftlabs/fastclick" target="_blank" rel="nofollow">https://github.com/ftlabs/fastclick</a><br>
+				<br>
+				<br>
+				<br>
+				<br>
+
+
+
+			</article>
+
+		</section>
+
+
+
+		@@include('../includes/footer.html', {"load-delay":"7"})
+
+	</div>
+
+</div>
+
+@@include('../includes/scripts-bottom.html')
+
+</body>
+</html>

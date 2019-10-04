@@ -1,0 +1,92 @@
+$font-cache-killer: 'wy642u';
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('/assets/fonts/icomoon/icomoon.eot?#{$font-cache-killer}');
+	src:url('/assets/fonts/icomoon/icomoon.eot?#{$font-cache-killer}#iefix') format('embedded-opentype'),
+		url('/assets/fonts/icomoon/icomoon.ttf?#{$font-cache-killer}') format('truetype'),
+		url('/assets/fonts/icomoon/icomoon.woff?#{$font-cache-killer}') format('woff'),
+		url('/assets/fonts/icomoon/icomoon.svg?#{$font-cache-killer}#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jpscd:before {
+	content: "\e60b";
+}
+.icon-mvp-in-a-month:before {
+	content: "\e64b";
+}
+.icon-arrow-right:before {
+	content: "\e7cd";
+}
+.icon-arrow-left:before {
+	content: "\e7cf";
+}
+.icon-confirm:before {
+	content: "\e7d6";
+}
+.icon-cancel:before {
+	content: "\e7d7";
+}
+.icon-product-discovery:before {
+	content: "\e881";
+}
+.icon-website-review:before {
+	content: "\e8b5";
+}
+.icon-chat:before {
+	content: "\e918";
+}
+.icon-live-chat:before {
+	content: "\e600";
+}
+.icon-instagram:before {
+	content: "\e601";
+}
+.icon-twitter:before {
+	content: "\e602";
+}
+.icon-vimeo:before {
+	content: "\e603";
+}
+.icon-flickr:before {
+	content: "\e604";
+}
+.icon-github:before {
+	content: "\e605";
+}
+.icon-linkedin:before {
+	content: "\e606";
+}
+.icon-mail-small:before {
+	content: "\e607";
+}
+.icon-mobile-menu:before,
+.icon-hamburger-menu:before {
+	content: "\e800";
+}
+.icon-link-arrow:before {
+	content: "\e608";
+}
+.icon-twitter-small:before {
+	content: "\e609";
+}
+.icon-skype-small:before {
+	content: "\e60a";
+}
+

@@ -1,0 +1,204 @@
+
+@mixin smooth-fonts(){
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin enable-ligatures($full:false){
+	@if ($full==true) {
+		text-rendering: optimizeLegibility;
+		-moz-font-feature-settings: 'liga=1, dlig=1';
+		-moz-font-feature-settings: 'liga', 'dlig';
+		-ms-font-feature-settings: 'liga', 'dlig';
+		-o-font-feature-settings: 'liga', 'dlig';
+		-webkit-font-feature-settings: 'liga', 'dlig';
+		font-feature-settings: 'liga', 'dlig';
+	}
+	@else {
+		text-rendering: optimizeLegibility;
+		-moz-font-feature-settings: 'liga=1';
+		-moz-font-feature-settings: 'liga';
+		-ms-font-feature-settings: 'liga';
+		-o-font-feature-settings: 'liga';
+		-webkit-font-feature-settings: 'liga';
+		font-feature-settings: 'liga';
+	}
+}
+
+@mixin smart-link($link-colour, $hover-colour:'', $is-inverted:false) {
+
+	// transition: color 0.15s ease-out, background-image 0.15s ease-out;
+
+	@if ($hover-colour == '') {
+		$hover-colour: darken($link-colour, 15%);
+	}
+
+	@if $is-inverted == true {
+
+		// inverted link style (only underline on hover)
+		color: $link-colour;
+		text-decoration: none;
+		background-image: none;
+
+
+		// Clear descendors from underline
+		text-shadow: 3px 0 white, 2px 0 white, 1px 0 white, -1px 0 white, -2px 0 white, -3px 0 white;
+
+		&:hover {
+			text-decoration: none;
+			color: $hover-colour;
+
+			// Underline via gradient background
+			background-image: linear-gradient(rgba($hover-colour, 0.25) 0%, $hover-colour 100%);
+			background-repeat: repeat-x;
+			background-size: 1px 1px;
+			background-position: 0 95%;
+
+			// Tweak position + thickness for high res (1.75x and up) displays
+			@media (-webkit-min-device-pixel-ratio: 1.75), (min-resolution: 168dpi) {
+				background-image: linear-gradient(rgba($hover-colour, 0.25) 0%, $hover-colour 100%);
+				background-position: 0 93%;
+			}
+		}
+	}
+
+	@else {
+
+		// default link style
+		color: $link-colour;
+		text-decoration: none;
+
+		// Underline via gradient background
+		background-image: linear-gradient(rgba($link-colour, 0.25) 0%, $link-colour 100%);
+		background-repeat: repeat-x;
+		background-size: 1px 1px;
+		background-position: 0 95%;
+
+		// Tweak position + thickness for high res (1.75x and up) displays
+		@media (-webkit-min-device-pixel-ratio: 1.75), (min-resolution: 168dpi) {
+			background-image: linear-gradient(rgba($link-colour, 0.25) 0%, $link-colour 100%);
+			background-position: 0 93%;
+		}
+
+		// Clear descendors from underline
+		text-shadow: 3px 0 white, 2px 0 white, 1px 0 white, -1px 0 white, -2px 0 white, -3px 0 white;
+
+		&:hover {
+			text-decoration: none;
+			color: $hover-colour;
+			background-image: none;//linear-gradient(to bottom, darken($link-colour, 6%) 0%, darken($link-colour, 6%) 100%);
+		}
+	}
+}
+
+
+@mixin feedback-quote() {
+	blockquote {
+		margin: 0;
+		padding: 0;
+
+		p {
+			margin: 0;
+			padding: 0;
+
+			&:before {
+				content: '\201C';
+				margin-left: -18px;
+				margin-right: 4px;
+				color: $colour-blue;
+				font-size: 24px;
+				line-height: 18px;
+			}
+
+			&:after {
+				content: '\201D';
+				margin-right: -18px;
+				margin-left: 4px;
+				color: $colour-blue;
+				font-size: 24px;
+				line-height: 18px;
+			}
+		}
+	}
+
+	footer {
+		margin: 12px 0 0 0;
+
+		cite {
+			color: lighten($colour-dark-grey, 40%);
+			font-style: italic;
+			font-weight: 400;
+		}
+	}
+}
+
+
+@mixin profile-article() {
+
+	.profile-pic {
+		width: 156px;
+		border-radius: 50%;
+		padding: 3px;
+		margin: 0 0 24px calc(50% - 78px);
+		float: clear;
+		background: #FFFFFF;
+		box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.20), 0px 0px 2px 0px rgba(0,0,0,0.12);
+	}
+
+	.profile-desc {
+		width: 100%;
+		margin-left: 0;
+
+		h4 {
+			font-size: 24px;
+			font-family: $font-stack-body;
+			margin-bottom: 30px;
+		}
+	}
+
+	.profile-agencies-img {
+		width: 100%;
+		margin: 36px auto 30px auto;
+	}
+
+	@include tablet {
+		.profile-pic {
+			float: left;
+			margin: 0;
+		}
+
+		.profile-desc {
+			width: 100%;
+			max-width: 490px;
+			margin-left: 204px;
+		}
+	}
+
+	@include desktop {
+		.profile-pic {
+			float: left;
+			margin: 0;
+		}
+
+		.profile-desc {
+			width: 498px;
+			margin-left: 204px;
+		}
+	}
+}
+
+
+@mixin clearfix() {
+
+	&:before,
+	&:after {
+		content:'';
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" class="lang-en">
+<head>
+
+@@include('../includes/head-meta.html',{
+	"page-title":"Oh uh… Something’s broken. But it wasn’t me.",
+	"page-description":"HTTP 500 - Server error",
+	"page-image":"https://@@cdnHost/images/error-500@2x.jpg",
+	"page-url":"https://joaopescada.com/errors/500"
+})
+
+<link rel="subresource" href="/assets/images/error-500-text@2x.png">
+<link rel="subresource" href="/assets/images/error-500-bg.jpg">
+
+<meta name="robots" content="index, follow">
+
+<link rel="stylesheet" type="text/css" href="/assets/styles/http-errors.css">
+
+</head>
+<body>
+
+<div class="container error-500">
+
+	<div class="page">
+
+		<div class="error-label">HTTP 500 - Server Error</div>
+		<a href="mailto:joao@pescada.pt?subject=Something%E2%80%99s%20broken%20on%20your%20website"><img src="/assets/images/error-500-text@2x.png" alt="" class="error-text"></a>
+
+	</div>
+
+</div>
+
+@@include('../includes/scripts-google-analytics.html')
+</body>
+</html>

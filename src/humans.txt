@@ -1,0 +1,28 @@
+/* TEAM */
+
+Designer, Developer & Husband: Joao Pescada
+Site: https://JoaoPescada.com
+Twitter: @jpscd
+
+Moral Support & Wife: Ana Emilia Silva
+Site: http://AnaEmiliaSilva.com
+Twitter: SilvaAnaEmilia
+
+Usability, Tech Support & In-House Dog: Mia
+Site: http://mia.pescada.pt
+Twitter: @mia_pescada
+
+
+
+/* THANKS */
+
+Family, Friends and Clients :)
+
+
+
+/* SITE */
+Last update: 2016/09/17
+Standards: HTML5, CSS3, Robots.txt, Humans.txt
+Languages: HTML, CSS, Javascript, PHP
+Components: Modernizr, jQuery
+Software: Sketch, SublimeText, Sourcetree, OSX, Ubuntu, Gulp, Spotify

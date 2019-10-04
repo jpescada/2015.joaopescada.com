@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="lang-en">
+<head>
+
+@@include('../includes/head-meta.html',{
+	"page-title":"AS3 on PureMVC, round one - Article by João Pescada",
+	"page-description":"One of the biggest conclusions I found with this road I took was that allowing myself to fail, brought an enormous bandwagon of knowledge and rewarding experience.",
+	"page-image":"https://@@cdnHost/images/article-as3-on-puremvc-round-one.jpg",
+	"page-url":"https://joaopescada.com/articles/as3-on-puremvc-round-one/"
+})
+
+<link rel="alternate" type="application/rss+xml" title="Letters from João" href="https://feeds.feedburner.com/joaopescada">
+<meta name="robots" content="index, follow">
+
+@@include('../includes/head-styles.html')
+
+</head>
+<body>
+
+<div class="container">
+
+	<div class="page articles articles-detail as3-on-puremvc-round-one">
+
+
+		@@include('../includes/header.html', {"page":"articles"})
+
+		<h1 class="page-title lazy-load"><span>Articles</span></h1>
+
+		<h2 class="header-title lazy-load lazy-load-delay-1">
+			AS3 on PureMVC, round one
+		</h2>
+
+		<h4 class="header-subtitle lazy-load lazy-load-delay-2">6th January, 2010</h4>
+
+		<section id="detail" class="section section-articles-detail lazy-load lazy-load-delay-3">
+
+			<img src="/assets/images/article-as3-on-puremvc-round-one.jpg" alt="" class="article-img lazy-load lazy-load-delay-4">
+
+			<article class="section-article lazy-load lazy-load-delay-6">
+
+				As referenced in the title, this article is about coding <a href="https://en.wikipedia.org/wiki/ActionScript" target="_blank" rel="nofollow">Actionscript</a> 3.0 in a <a href="http://en.wikipedia.org/wiki/Model%EF%BF%BDview%EF%BF%BDcontroller" target="_blank" rel="nofollow">Model-View-Controller</a> <a href="https://en.wikipedia.org/wiki/Design_pattern_(computer_science)" target="_blank" rel="nofollow">design pattern</a>, namely the <a href="http://puremvc.org/" target="_blank" rel="nofollow">PureMVC</a> way.<br>
+				<br>
+
+
+				<h3>Problems don’t exist. Only opportunities for creating solutions.</h3>
+
+				A few years back, when I started on web design / development, it was a one-man show. I then started working with other developers from time to time. Two years ago, I joined a team of Adobe Flash developers, and only then I realized how many routes a single coding task can take. We all have different approaches on coding and with this in mind, I felt the need to find a standardized way of developing Adobe Flash based websites / applications.<br>
+				<br>
+				Last year, after a lot of online research on Actionscript frameworks, I found PureMVC to be the most stable, mature and — most importantly — well documented.<br>
+				<br>
+
+
+				<h3>Kicking the tyres.</h3>
+
+				Before having other team members sharing my opinion, I had to try it myself and apply all the concept on a real project.<br>
+				<br>
+				My first approach on this design pattern — by the time of publishing this article — is still to be available online. It’s nothing too fancy, but what’s on focus here, is the code holding the pieces together. It’s a structure built to support three websites with similar content for Casinos de Angola. Two websites are on an ongoing approval process, while the third is still to be designed.<br>
+				<br>
+
+
+				<h3>“If anything can go wrong, it will.”</h3>
+
+				Having little to no experience using the MVC pattern, and a deadline to meet, it was a risky choice to make. But still, I opted to take this road. And so — validating the aforementioned <a href="http://en.wikipedia.org/wiki/Murphy's_law" target="_blank" rel="nofollow">Murphy’s Law</a> — I failed the initial deadline.<br>
+				<br>
+				The development process took waaaaaay longer than I expected. Not because there was a lot to code, but because there was a lot to learn in order to get a solid ground to start building with the chosen architecture.<br>
+				A big learning curve of concepts before getting into any real coding is a bummer.<br>
+				<br>
+
+
+				<h3>Happier programming.</h3>
+
+				What do you think about the idea? Sounds good, right? It feels even better!<br>
+				The framework enables a <a href="http://en.wikipedia.org/wiki/Loose_coupling" target="_blank" rel="nofollow">loose coupling</a> between resources allowing an easy development of really project independent components. Maybe this is geek / coder talk, but it feels a more Human-like communication between abstract project resources. Bare this in mind: the notifications are a bliss to work with!<br>
+				<br>
+				Being an avid follower of the <a href="http://en.wikipedia.org/wiki/Don't_Repeat_Yourself" target="_blank" rel="nofollow">Don’t Repeat Yourself</a> principle and a <a href="http://en.wikipedia.org/wiki/Control_freak">control freak</a> for logical organization and standardization I chose to implement a <a href="http://en.wikipedia.org/wiki/Convention_over_Configuration" target="_blank" rel="nofollow">Convention Over Configuration</a> paradigm by specifying the website structure / layout in a single <a href="http://en.wikipedia.org/wiki/XML" target="_blank" rel="nofollow">XML</a> (Model) file.<br>
+				<br>
+				As most developers, if I can avoid extra work, by automating processes, I do. Better yet: if I can avoid starting a new project from scratch, and just re-factor 10-15% code of a previous one, I SURE do. And that’s what happened. Having the website contents (Model/Proxies) automating the layout (View), only a few bits of the business logic (Mediators) had to be changed. Now THIS is (planned) <a href="http://en.wikipedia.org/wiki/Code_reuse" target="_blank" rel="nofollow">code reuse</a>!<br>
+				<br>
+
+
+				<h3>Wrapping up…</h3>
+
+				“The concept of PureMVC may make the best of us shy away, but once you’ve got your head around the bare fundamentals, you’ll soon be flying your way around it.” — <a href="http://ahmednuaman.com/" target="_blank" rel="nofollow">Ahmed Nuaman</a> said it on <a href="http://active.tutsplus.com/tutorials/workflow/understanding-the-puremvc-open-source-framework/" target="_blank" rel="nofollow">the first tutorial on PureMVC I’ve read</a>, and I could not agree more (though I’m still learning the flying part).<br>
+				<br>
+				I’m currently — at the time I started writing this article — finishing the development of two video players with similar functionalities, and everything is running smoother and faster. The first player took around 7 hours to complete. The second one? 45 minutes!<br>
+				<br>
+				One of the biggest conclusions I found with this road I took was that allowing myself to fail, brought an enormous bandwagon of knowledge and rewarding experience. Only by trying harder and harder every now and then, and subsequently failing a lot of those times, you will broaden your comfort zone and therefore your horizons.<br>
+				<br>
+				Maybe there’s an influence here from the <a href="http://www.offf.ws/oeiras/">OFFF’s 2009 edition</a> theme: “Fail Gracefully” and the “This isn’t flying, this is falling with style” quote from <a href="http://www.imdb.com/title/tt0114709/" target="_blank" rel="nofollow">Toy Story</a>.<br>
+				<br>
+
+
+				<h3>Want to learn more about AS3 on PureMVC?</h3>
+
+				Follows a list of articles / tutorials / books I’ve read, that I think are important for anyone that would like to learn more on the subject:<br>
+				<ul>
+					<li><a href="http://active.tutsplus.com/tutorials/workflow/understanding-the-puremvc-open-source-framework/" target="_blank" rel="nofollow">Understanding the PureMVC Open Source Framework</a> by <a href="http://ahmednuaman.com/" target="_blank" rel="nofollow">Ahmed Nuaman</a></li>
+					<li><a href="http://puremvc.org/pages/docs/current/PureMVC_Implementation_Idioms_and_Best_Practices.pdf" target="_blank" rel="nofollow">PureMVC: Implementation Idioms and Best Practices</a> [PDF] by <a href="http://content.futurescale.com/" target="_blank" rel="nofollow">Cliff Hall</a></li>
+					<li><a href="http://lowpitch.com/blog/why-puremvc-and-scaling-the-learning-curve/" target="_blank" rel="nofollow">Discovering PureMVC, and scaling the learning curve</a> by <a href="http://lowpitch.com/" target="_blank" rel="nofollow">Toby Ashley</a></li>
+					<li><a href="http://hubflanger.com/building-a-flash-site-using-puremvc/" target="_blank" rel="nofollow">Building a Flash site using PureMVC</a> by <a href="http://hubflanger.com/" target="_blank" rel="nofollow">Yee Peng Chia</a></li>
+					<li><a href="http://www.actionscriptdeveloper.co.uk/puremvc-tutorial-flex-puremvc-jabber-and-xiff-3-introduction/" target="_blank" rel="nofollow">Puremvc Tutorial – Flex, Puremvc, Jabber and Xiff 3</a> by <a href="http://www.actionscriptdeveloper.co.uk/" target="_blank" rel="nofollow">Dave Keen</a></li>
+					<li><a href="http://active.tutsplus.com/tutorials/video/creating-a-youtube-search-and-play-gadget-with-puremvc/" target="_blank" rel="nofollow" target="_blank" rel="nofollow">Creating a YouTube Search and Play Gadget with PureMVC</a> by <a href="http://ahmednuaman.com/" target="_blank" rel="nofollow">Ahmed Nuaman</a></li>
+					<li><a href="http://www.as3dp.com/2007/12/27/minimalist-mvc-example-using-the-puremvc-framework/" target="_blank" rel="nofollow">Minimalist MVC example using the PureMVC Framework</a> by <a href="http://www.turingtarpit.com/" target="_blank" rel="nofollow">Chandima Cumaranatunge</a></li>
+					<li><a href="http://www.amazon.co.uk/gp/product/0596528469?ie=UTF8&amp;tag=jopebl-21&amp;linkCode=as2&amp;camp=1634&amp;creative=6738&amp;creativeASIN=0596528469" target="_blank" rel="nofollow">ActionScript 3.0 Design Patterns: Object Oriented Programming Techniques</a> [Book] by <a href="http://www.sandlight.com/" target="_blank" rel="nofollow">William Sander</a> and <a href="http://www.turingtarpit.com/" target="_blank" rel="nofollow">Chandima Cumaranatunge</a></li>
+				</ul>
+				<br>
+				I’ll be keeping this list updated with new articles / tutorials / books once I find and read them.<br>
+				<br>
+
+
+				<h3>Any feedback?</h3>
+
+				Do you use PureMVC or have tried it? Like it? Hate it? Maybe another framework?<br>
+				I would love to hear your opinions and to know whether or not I should go for a “Round Two” article on the PureMVC subject.<br>
+				Your feedback will be much appreciated!<br>
+				<br>
+				<br>
+				<em><a href="http://www.sxc.hu/photo/901669" target="_blank" rel="nofollow">Photo</a> by <a href="http://www.sxc.hu/profile/vierdrie" target="_blank" rel="nofollow">Jean Scheijen</a>.</em><br>
+				<br>
+				<br>
+				<br>
+				<br>
+
+
+
+
+			</article>
+
+		</section>
+
+
+
+		@@include('../includes/footer.html', {"load-delay":"7"})
+
+	</div>
+
+</div>
+
+@@include('../includes/scripts-bottom.html')
+
+</body>
+</html>

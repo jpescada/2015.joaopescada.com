@@ -1,0 +1,117 @@
+.about {
+
+	.header-title {
+		position: relative;
+		z-index: 50;
+	}
+
+	.section-article {
+		a {
+			@include smart-link($colour-dark-grey, $colour-pink);
+		}
+	}
+
+	.section-basics {
+		margin-top: 0;
+
+		.section-header-background {
+			display: block;
+			width: 6000px;
+			height: 500px;
+			position: absolute;
+			left: 50%;
+			top: -210px;
+			transform: rotate(-4deg) translateX(-50%);
+			transform-origin: center top;
+			z-index: 0;
+			// background: url(/assets/images/section-me-header-background.jpg) center repeat-y;
+			// background-size: 6000px 50px;
+			background: #F8F8F8;
+		}
+
+		.section-header {
+			height: 500px;
+			background: url(/assets/images/about-header@2x.jpg) center top no-repeat;
+			background-size: 1468px 500px;
+			transform: translateZ(0);
+			z-index: 10;
+
+			&:before {
+				content: '';
+				display: block;
+				width: 6000px;
+				height: 110px;
+				position: absolute;
+				left: 50%;
+				top: -265px;
+				transform: rotate(-4deg) translateX(-50%);
+				transform-origin: center top;
+				z-index: 2;
+				background-color: $section-light-bg;
+			}
+
+			&:after {
+				content: '';
+				display: block;
+				width: 6000px;
+				height: 110px;
+				position: absolute;
+				left: 50%;
+				top: 230px;
+				transform: rotate(-4deg) translateX(-50%);
+				transform-origin: center top;
+				z-index: 2;
+				background-color: $section-light-bg;
+			}
+		}
+
+		.section-article {
+			padding-top: 30px;
+		}
+	}
+
+	.section-personal {
+
+		&:before {
+			content: '';
+			display: block;
+			width: 100%;
+			max-width: 1034px;
+			height: 68px;
+			position: absolute;
+			left: 50%;
+			top: -24px;
+			transform: translateX(-50%);
+			z-index: 2;
+			background: url(/assets/images/section-limiter-1@2x.png) no-repeat center;
+			background-size: 1034px 68px;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			width: 100%;
+			max-width: 1041px;
+			height: 49px;
+			position: absolute;
+			left: 50%;
+			bottom: -30px;
+			transform: translateX(-50%);
+			z-index: 2;
+			background: url(/assets/images/section-limiter-2@2x.png) no-repeat center;
+			background-size: 1041px 49px;
+		}
+	}
+
+	.section-collab {
+
+	}
+
+}
+
+
+
+
+
+
+

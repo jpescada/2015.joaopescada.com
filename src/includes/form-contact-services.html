@@ -1,0 +1,16 @@
+<form action="/inflow/api/start" method="post" accept-charset="utf-8" class="form-contact form-inflow">
+	<input type="hidden" name="a3" class="form-input-profile" value="@@profile">
+	<input type="hidden" name="a4" class="form-input-success-url" value="/contact-sent-success">
+	<input type="hidden" name="a5" class="form-input-failure-url" value="/contact-sent-fail">
+	<div class="input-group">
+		<label for="fname-input">What’s your name?</label>
+		<input type="text" id="fname-input" name="a1" placeholder="Please type your name" class="form-input form-input-fname" maxlength="250" required>
+		<span class="validation-status"></span>
+	</div>
+	<div class="input-group">
+		<label for="email-input">What’s your email address?</label>
+		<input type="email" id="email-input" name="a2" placeholder="Please type your email address" class="form-input form-input-email" maxlength="250" required>
+		<span class="validation-status"></span>
+	</div>
+	<input type="submit" value="Let’s get started" class="button button-pink">
+</form>

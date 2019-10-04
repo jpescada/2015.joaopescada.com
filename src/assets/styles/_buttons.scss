@@ -1,0 +1,50 @@
+// generic material-like button
+.button {
+	display: inline-block;
+	text-shadow: none !important;
+	text-decoration: none !important;
+	color: white !important;
+	background: lightYellow;
+	background-image: none !important;
+	font-family: $font-stack-small;
+	font-size: 18px;
+	line-height: 30px;
+	padding: 18px 42px;
+	outline: none !important;
+	cursor: pointer;
+	border: none;
+	min-width: 220px;
+	text-align: center;
+	// background: #E80057;
+	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
+	border-radius: 4px;
+	transition: opacity .2s cubic-bezier(.4,0,.2,1), background-color .2s ease, box-shadow .28s cubic-bezier(.4,0,.2,1);
+
+	.no-touch &:hover {
+		box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+	}
+}
+
+.button-pink {
+	@extend .button;
+	background: $colour-pink;
+
+	.no-touch &:hover {
+		background-color: lighten($colour-pink, 5%);
+	}
+}
+
+.button-blue {
+	@extend .button;
+	background: $colour-blue;
+
+	.no-touch &:hover {
+		background-color: lighten($colour-blue, 5%);
+	}
+}
+
+.button-smaller {
+	padding: 6px 30px;
+	font-weight: 300;
+	line-height: 30px;
+}

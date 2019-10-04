@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="lang-en">
+<head>
+
+@@include('./includes/head-meta.html',{
+	"page-title":"For Agencies &amp; Recruiters - João Pescada",
+	"page-description":"Looking to bring in someone to help you with that project?",
+	"page-image":"https://@@cdnHost/images/social-share.jpg",
+	"page-url":"https://joaopescada.com/agencies/"
+})
+
+<meta name="robots" content="index, follow">
+
+@@include('./includes/head-styles.html')
+
+</head>
+<body>
+
+<div class="container">
+
+	<div class="page agencies">
+
+
+		@@include('./includes/header.html', {"page":"agencies"})
+
+		<h1 class="page-title lazy-load"><span>Agencies &amp; Recruiters</span></h1>
+
+		<h2 class="header-title lazy-load lazy-load-delay-1">
+			Recruiting is always&nbsp;hard&nbsp;work.<br>
+			Unless&nbsp;you&nbsp;can&nbsp;easily check&nbsp;references.
+		</h2>
+
+
+		<section id="feedback" class="section section-feedback lazy-load lazy-load-delay-2">
+
+			<div class="section-dark-background"></div>
+
+			<article class="section-article">
+
+				<div class="guide-arrow-left"></div>
+
+				<h3>What others&nbsp;say</h3>
+
+				@@include('./includes/testimonials.html', {"list-class":"section-list"})
+
+			</article>
+
+		</section>
+
+
+
+		<section id="what" class="section section-what lazy-load lazy-load-delay-3">
+
+			<article class="section-article">
+
+				<div class="guide-arrow-right"></div>
+
+				<h3>What I can work&nbsp;on</h3>
+
+				Currently, I’m only accepting contract roles for <strong>front-end development</strong>.<br>
+				<br>
+				I can create responsive websites and web apps as well as hybrid mobile apps.<br>
+				<br>
+				My preferred technology stack is HTML5, CSS3 and Javascript for modern (desktop and mobile) browsers.<br>
+				<br>
+				I regularly use Angular or React, SASS, Bootstrap or Foundation, NPM, Gulp or Grunt, Bower, Karma, Jasmine, Node, PHP, Python and Cordova / PhoneGap.<br>
+				<br>
+				Lengthwise, I prefer contracts from a minimum of 3 weeks up to a maximum of 12 months.<br>
+				<br>
+				Less than 3 weeks usually means patching someone else’s work on a tight deadline, which is not the best use of my time nor your money. More than 12 months is a red flag for too much internal bureaucracy or becoming part of the furniture, which is not optimal for neither parties.<br>
+				<br>
+				As a guide, my daily rate ranges between <span class="price" title="£400 / $500 / €450" data-price-gbp="£400" data-price-usd="$500" data-price-eur="€450">£400</span> and <span class="price" title="£650 / $950 / €850" data-price-gbp="£650" data-price-usd="$950" data-price-eur="€850">£650</span> (+VAT), depending on the complexity of the project and <a href="/availability">my&nbsp;availability</a>.
+
+			</article>
+
+		</section>
+
+
+
+		<section id="who" class="section section-who lazy-load lazy-load-delay-4">
+
+			<div class="section-dark-background"></div>
+
+			<article class="section-article">
+
+			<div class="guide-arrow-left"></div>
+
+				<h3>“Who’s this&nbsp;guy?”</h3>
+
+				@@include('./includes/profile-services.html')
+
+			</article>
+
+		</section>
+
+
+
+		<section id="next" class="section section-next lazy-load lazy-load-delay-5">
+
+			<article class="section-article">
+
+				<div class="guide-arrow-right"></div>
+
+				<h3>Next steps</h3>
+
+				You’re still with me? Great!<br>
+				<br>
+				Assuming you are interested in contracting me, please introduce yourself using the form below and we’ll get started right away.<br>
+				<br>
+				Once you submit this form, you’ll receive a welcome packet automatically. This is a quick read, but outlines my process and answers some questions that you might still be wondering about. Then we’ll move on to your idea.
+
+				@@include('./includes/form-contact-services.html', {"profile":"60f287c4-1c3a-4b17-934f-e24a92da17fc"})
+
+			</article>
+
+		</section>
+
+
+
+		@@include('./includes/footer.html', {"load-delay":"6"})
+
+	</div>
+
+</div>
+
+@@include('./includes/scripts-bottom.html')
+
+</body>
+</html>

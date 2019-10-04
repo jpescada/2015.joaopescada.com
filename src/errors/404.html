@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" class="lang-en">
+<head>
+
+@@include('../includes/head-meta.html',{
+	"page-title":"Hello human! Couldn’t find that link, but I found this ball!",
+	"page-description":"HTTP 404 - Not found",
+	"page-image":"https://@@cdnHost/images/error-404@2x.jpg",
+	"page-url":"https://joaopescada.com/errors/404"
+})
+
+<link rel="subresource" href="/assets/images/error-404-text@2x.png">
+<link rel="subresource" href="/assets/images/error-404-bg.jpg">
+
+<meta name="robots" content="index, follow">
+
+<link rel="stylesheet" type="text/css" href="/assets/styles/http-errors.css">
+
+</head>
+<body>
+
+<div class="container error-404">
+
+	<div class="page">
+
+		<div class="error-label">HTTP 404 - Not found</div>
+		<a href="/contact"><img src="/assets/images/error-404-text@2x.png" alt="" class="error-text"></a>
+
+	</div>
+
+</div>
+
+@@include('../includes/scripts-google-analytics.html')
+</body>
+</html>

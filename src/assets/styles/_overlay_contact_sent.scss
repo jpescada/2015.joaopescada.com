@@ -1,0 +1,151 @@
+.modal-contact-sent {
+	width: 300px;
+	height: 460px;
+	margin-top: -230px;
+	margin-left: -150px;
+	font-family: $font-stack-body;
+	font-size: 18px;
+	line-height: 30px;
+	text-align: center;
+
+	a:not(.button) {
+		@include smart-link($colour-dark-grey, $colour-pink);
+	}
+
+	.close-button {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		text-decoration: none;
+		color: rgba($colour-dark-grey, 0.6);
+		width: 30px;
+		height: 30px;
+		padding: 8px 8px;
+		font-size: 13px;
+		line-height: 14px;
+		background: none !important;
+		border: 1px solid rgba($colour-dark-grey, 0);
+		border-radius: 50%;
+
+		.no-touchh &:hover {
+			color: $colour-dark-grey !important;
+			border-color: $colour-dark-grey;
+		}
+	}
+
+	.ok-button {
+		padding: 18px 60px;
+		margin-top: 36px;
+	}
+
+	.sent-success {
+		.ok-button {
+			margin-top: 36px;
+		}
+	}
+
+	.sent-error {
+		.ok-button {
+			margin-top: 12px;
+		}
+	}
+	
+
+	h3 {
+		font-family: $font-stack-title;
+		font-size: 36px;
+		line-height: 48px;
+		margin: 42px auto 24px auto;
+	}
+
+
+	.splitter {
+		width: 100%;
+		max-width: 1123px;
+		height: 24px;
+		background: url(/assets/images/section-limiter-6@2x.png) no-repeat center;
+		background-size: 1123px 24px;
+		margin: 42px auto;
+		display: none;
+	}
+}
+
+.modal-contact-sent-error {
+
+	h3 {
+		margin-top: 36px;
+	}
+
+	.splitter {
+		margin: 30px auto;
+	}
+
+	.ok-button {
+		margin-top: 12px;
+	}
+}
+
+@include tablet {
+	.modal-contact-sent {
+		width: 650px;
+		height: 460px;
+		margin-top: -230px;
+		margin-left: -325px;
+
+		.splitter {
+			display: block;
+		}
+
+		h3 {
+			margin: 48px auto 24px auto;
+		}
+
+		.ok-button {
+			margin-top: 0;
+		}
+	}
+
+	.modal-contact-sent-error {
+
+		h3 {
+			margin: 48px auto 24px auto;
+		}
+
+		.ok-button {
+			margin-top: 0;
+		}
+	}
+}
+
+@include desktop {
+	.modal-contact-sent {
+		width: 650px;
+		height: 460px;
+		margin-top: -230px;
+		margin-left: -325px;
+
+		.splitter {
+			display: block;
+		}
+
+		h3 {
+			margin: 48px auto 24px auto;
+		}
+
+		.ok-button {
+			margin-top: 0;
+		}
+	}
+
+	.modal-contact-sent-error {
+
+		h3 {
+			margin: 48px auto 24px auto;
+		}
+
+		.ok-button {
+			margin-top: 0;
+		}
+	}
+}
+

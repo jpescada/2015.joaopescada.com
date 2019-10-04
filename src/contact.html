@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="lang-en">
+<head>
+
+@@include('./includes/head-meta.html',{
+	"page-title":"Contact João Pescada",
+	"page-description":"All my (public) contacts in one place.",
+	"page-image":"https://@@cdnHost/images/social-share.jpg",
+	"page-url":"https://joaopescada.com/contact/"
+})
+
+<meta name="robots" content="index, follow">
+
+@@include('./includes/head-styles.html')
+
+</head>
+<body>
+
+<div class="container">
+
+	<div class="page contact">
+
+
+		@@include('./includes/header.html', {"page":"contact"})
+
+		<h1 class="page-title lazy-load"><span>Contact &amp; Connect</span></h1>
+
+		<h2 class="header-title lazy-load lazy-load-delay-1">
+			If you’re in London, I’m&nbsp;in&nbsp;town. <br>
+			Otherwise, I’m&nbsp;just&nbsp;an&nbsp;email&nbsp;away.
+		</h2>
+
+
+
+		<section id="contact" class="section section-contact lazy-load lazy-load-delay-2">
+
+			<div class="section-dark-background"></div>
+
+			<article class="section-article">
+
+				<h3>Get your idea started today</h3>
+
+				If you have an idea for a project that you think I could help you with, please introduce yourself using the form below and we’ll get started right away.<br>
+				<br>
+				Once you submit this form, you’ll receive a welcome packet automatically. This is a quick read, but outlines my process and answers some questions that you might still be wondering about. Then we’ll move on to your idea.
+
+				@@include('./includes/form-contact-services.html', {"profile":"1118b183-9b87-47e7-9d5d-48011a11e40f"})
+
+			</article>
+
+		</section>
+
+
+
+		<section id="connect" class="section section-connect lazy-load lazy-load-delay-3">
+
+			<article class="section-article">
+
+				<h3>Let’s just connect</h3>
+
+				Choose your favourite tool below, send me a message and I’ll reply to you.<br>
+				For me, my favourite one is still email. Yes, call me old school. <br>
+
+				<div class="column column-left">
+
+					<ul>
+						<li><a href="mailto:joao@pescada.pt" rel="nofollow"><span class="icon icon-mail-small"></span> Email</a></li>
+						<li><a href="https://twitter.com/jpscd" target="_blank" rel="nofollow"><span class="icon icon-twitter"></span> Twitter</a></li>
+						<li><a href="https://www.linkedin.com/joao.pescada" target="_blank" rel="nofollow"><span class="icon icon-linkedin"></span> LinkedIn</a></li>
+						<li><a href="#" rel="nofollow" class="link-live-chat"><span class="icon icon-live-chat"></span> Live Chat</a></li>
+					</ul>
+				</div>
+
+				<div class="column column-right">
+
+					<ul>
+						<li><a href="https://github.com/jpescada" target="_blank" rel="nofollow"><span class="icon icon-github"></span> Github</a></li>
+						<li><a href="https://instagram.com/jpescada" target="_blank" rel="nofollow"><span class="icon icon-instagram"></span> Instagram</a></li>
+						<li><a href="https://www.flickr.com/photos/jpscd" target="_blank" rel="nofollow"><span class="icon icon-flickr"></span> Flickr</a></li>
+						<li><a href="https://vimeo.com/jpescada" target="_blank" rel="nofollow"><span class="icon icon-vimeo"></span> Vimeo</a></li>
+					</ul>
+				</div>
+
+			</article>
+
+		</section>
+
+
+		@@include('./includes/footer.html', {"load-delay":"4"})
+
+	</div>
+
+</div>
+
+@@include('./includes/scripts-bottom.html')
+
+</body>
+</html>

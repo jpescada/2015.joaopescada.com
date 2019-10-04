@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" class="lang-en">
+<head>
+
+@@include('./includes/head-meta.html',{
+	"page-title":"Start your Product Discovery - João Pescada",
+	"page-description":"If you don‘t know where to start that idea, this is for you. Start it now.",
+	"page-image":"https://@@cdnHost/images/social-share.jpg",
+	"page-url":"https://joaopescada.com/product-discovery/start/"
+})
+
+<meta name="robots" content="index, follow">
+
+@@include('./includes/head-styles.html')
+
+</head>
+<body>
+
+<div class="container">
+
+	<div class="page product-discovery-start">
+
+
+		@@include('./includes/header.html', {"page":"product-discovery"})
+
+		<h1 class="page-title lazy-load"><span>Product Discovery</span></h1>
+
+		<h2 class="header-title lazy-load lazy-load-delay-1">
+			Let’s get that great idea started.<br>
+			Just&nbsp;two steps and you’re&nbsp;ready&nbsp;to&nbsp;go.
+		</h2>
+
+
+		<form action="/inflow/api/start" method="post" accept-charset="utf-8" class="form-contact form-contact-product form-inflow update-preview-box">
+			<input type="hidden" name="c1" class="form-input-profile" value="ef04eee3-84d6-47eb-9bbc-2290da01bde7">
+			<input type="hidden" name="c3" class="form-input-success-url" value="/inflow-success.html">
+			<input type="hidden" name="c4" class="form-input-failure-url" value="/inflow-failure.html">
+
+
+			<section id="one" class="section section-one lazy-load lazy-load-delay-2">
+
+				<div class="section-dark-background"></div>
+
+				<article class="section-article">
+
+					<div class="guide-arrow-left"></div>
+
+					<h3>Step one</h3>
+
+					<div class="centred">
+						Please start by introducing&nbsp;yourself.<br>
+						<br>
+
+						<div class="form-step-one">
+
+							<div class="input-row">
+								<div class="input-group">
+									<label for="fname-input">What’s your name?</label>
+									<input type="text" id="fname-input" name="a1" placeholder="Please type your name" class="form-input form-input-fname" maxlength="250" tabindex="1" required>
+									<span class="validation-status"></span>
+								</div>
+								<div class="input-group">
+									<label for="email-input">What’s your email&nbsp;address?</label>
+									<input type="email" id="email-input" name="a2" placeholder="Please type your email address" class="form-input form-input-email" maxlength="250" tabindex="2" required>
+									<span class="validation-status"></span>
+								</div>
+							</div>
+
+							<div class="input-row">
+								<div class="input-group">
+									<label for="skype-input">And what’s your Skype&nbsp;username?</label>
+									<input type="text" id="skype-input" name="a3" placeholder="Please type your Skype username" class="form-input form-input-skype" maxlength="250" tabindex="3" data-linked-input="#phone-input" data-linked-input-priority="1">
+									<span class="validation-status"></span>
+								</div>
+								<div class="input-group">
+									<label for="phone-input">Or what’s your phone&nbsp;number?</label>
+									<input type="text" id="phone-input" name="a4" placeholder="Please type your phone number" class="form-input form-input-phone" maxlength="30" tabindex="4" data-linked-input="#skype-input" data-linked-input-priority="2">
+									<span class="validation-status"></span>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+				</article>
+
+			</section>
+
+
+
+			<section id="two" class="section section-two lazy-load lazy-load-delay-3">
+
+				<article class="section-article">
+
+					<div class="guide-arrow-right"></div>
+
+					<h3>Step two</h3>
+
+					<div class="centred">
+						Now please pick a date and time for your Product Discovery session.<br>
+						Each session is time-boxed and lasts up to two hours, <br>
+ but honestly it usually takes less than one hour.<br>
+						<br>
+
+						<div class="form-step-two">
+							<div class="input-group component-bookable-meetings">
+								<label>When would you like to have your session?</label>
+
+								<div class="radio-row bookable-meetings-list">
+									<br>
+									Loading available dates...
+
+								</div>
+
+							</div>
+
+
+						</div>
+					</div>
+
+				</article>
+
+			</section>
+
+
+
+			<section id="ready" class="section section-ready lazy-load lazy-load-delay-4">
+
+				<div class="section-dark-background"></div>
+
+				<article class="section-article">
+
+					<div class="guide-arrow-left"></div>
+
+					<h3>And you’re ready</h3>
+
+					Once you submit the booking, you’ll receive a welcome packet automatically. This is a quick read but outlines my process and answers some questions that you might still be wondering about.<br>
+					<br>
+					Then, within 24 hours, I’ll get back to you to confirm your booking and send you a link for online payment of the session.<br>
+					<br>
+					When the payment is confirmed, I’ll send you a signed non-disclosure agreement and an agenda for the session with some questions for you to come prepared and we can make the most out of it.<br>
+					<br>
+
+					<div class="centred">
+
+						<div class="submission-check">
+							<h4>Just a quick check before submission:</h4>
+
+							<div class="preview-box">
+								You, <span class="placeholder" title="Your name" data-related-input="#fname-input" data-default-value="[your name?]">[your name?]</span> (e: <span class="placeholder" title="Your email" data-related-input="#email-input" data-default-value="[your email?]">[your email?]</span><span class="optional-placeholder">, s: <span class="placeholder" title="Your Skype username" data-related-input="#skype-input" data-default-value="[your Skype username?]">[your Skype username?]</span></span><span class="optional-placeholder">, p: <span class="placeholder" title="Your phone number" data-related-input="#phone-input" data-optional- data-default-value="[your phone number?]">[your phone number?]</span></span>)<br>
+								are booking a Product Discovery session with me (Joao Pescada) for<br>
+								<span class="placeholder" title="Your session’s date &amp; time" data-related-input=".form-input-meeting" data-default-value="[your session’s date &amp; time?]">[your session’s date &amp; time?]</span>
+							</div>
+
+							<br>
+							All looking good? Fire&nbsp;away&nbsp;then!<br>
+							<br>
+						</div>
+
+						<br>
+
+						<input type="submit" value="Submit your booking&nbsp;now" class="button button-pink" tabindex="8">
+
+						<br>
+						<br>
+						<br>
+						<br>
+						Still have questions? Please <a href="mailto:joao@pescada.pt">drop me an email</a>. I’d love to hear from you.<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+
+					</div>
+
+				</article>
+
+			</section>
+
+		</form>
+
+
+	</div>
+
+</div>
+
+@@include('./includes/scripts-bottom.html')
+
+</body>
+</html>
